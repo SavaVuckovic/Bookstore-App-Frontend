@@ -12,7 +12,8 @@ class BooksList extends Component {
       const { id, title, category, author, complete } = book;
       return (
         <Book
-          id={id} 
+          key={id}
+          id={id}
           title={title} 
           category={category}
           author={author}
@@ -31,10 +32,7 @@ class BooksList extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    books: state.books
-  };
-}
-
+const mapStateToProps = ({ books }) => {
+  return { books };
+};
 export default connect(mapStateToProps)(BooksList);
