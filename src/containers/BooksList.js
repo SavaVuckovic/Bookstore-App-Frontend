@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Book from '../components/Book';
 
 class BooksList extends Component {
@@ -7,14 +8,18 @@ class BooksList extends Component {
   }
 
   renderBooks() {
-    // change later
-    return (<Book 
-      id={1} 
-      title={'Book Title'} 
-      category={'Category'}
-      author={'Book Author'}
-      complete={27}
-    />)
+    return this.props.books.map(book => {
+      const { id, title, category, author, complete } = book;
+      return (
+        <Book
+          id={id} 
+          title={title} 
+          category={category}
+          author={author}
+          complete={complete}
+        />
+      );
+    });
   }
  
   render() {
@@ -26,4 +31,10 @@ class BooksList extends Component {
   }
 }
 
-export default BooksList;
+function mapStateToProps(state) {
+  return {
+    books: state.books
+  };
+}
+
+export default connect(mapStateToProps)(BooksList);

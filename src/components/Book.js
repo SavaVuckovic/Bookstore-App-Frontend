@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Book = ({ id, title, category, author }) => (
+const Book = ({ id, title, category, author, complete }) => (
   <div className="book">
     <div className="left">
       <div className="info">
@@ -16,7 +16,10 @@ const Book = ({ id, title, category, author }) => (
     </div>
     <div className="right">
       <div className="spinner"></div>
-      <div className="percent"></div>
+      <div className="percent">
+        <h1>{complete} %</h1>
+        <span>Completed</span>
+      </div>
     </div>
   </div>
 );
