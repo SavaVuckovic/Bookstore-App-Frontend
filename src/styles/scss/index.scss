@@ -1,5 +1,3 @@
-$red: red;
-
-body {
-  background: $red;
-}
+@import 'variables';
+@import 'general';
+@import 'navbar';

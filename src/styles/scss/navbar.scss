@@ -1,0 +1,35 @@
+.navbar {
+  background: $white;
+  height: 95px;
+  border-bottom: 2px solid $lightgray;
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .links {
+      display: flex;
+      align-items: center;
+      .logo {
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: bold;
+        color: $blue;
+        margin-right: 16px;
+      }
+      span {
+        text-transform: uppercase;
+        margin: 16px;
+        font-size: 16px;
+        font-family: Montserrat;
+        color: $gray;
+      }
+    }
+    .logged-user {
+      width: 45px;
+      height: 45px;
+      margin-left: auto;
+      border: 1px solid $lightgray;
+      border-radius: 50%;
+    }
+  }
+}

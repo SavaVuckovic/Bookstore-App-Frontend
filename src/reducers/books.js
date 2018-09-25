@@ -1,7 +1,6 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
 
 export default function booksReducer(state = [], action) {
-  console.log('runs');
   switch(action.type) {
     case CREATE_BOOK:
       return [...state, action.payload];
