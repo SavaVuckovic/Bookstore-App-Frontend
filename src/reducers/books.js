@@ -1,3 +1,12 @@
-export default function booksReducer() {
-  return 1;
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
+
+export default function booksReducer(state = [], action) {
+  switch(action.type) {
+    case CREATE_BOOK:
+      return [...state, action.payload];
+    case REMOVE_BOOK:
+      return state.filter(b => b !== action.payload);
+    default:
+      return state;
+  }
 }
