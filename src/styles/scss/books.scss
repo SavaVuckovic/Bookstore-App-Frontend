@@ -1,0 +1,49 @@
+.books-list {
+  border-bottom: 2px solid $lightgray; 
+  padding: 36px 0;
+  .book {
+    border: 1.5px solid $lightgray;
+    background: $white;
+    border-radius: 4px;
+    height: 170px;
+    padding: 24px;
+    display: flex;
+    .left {
+      border: 1px solid red;
+      flex: 3;
+      .info {
+        .category {
+          color: $gray;
+          margin: 0;
+          font-weight: 600;
+        }
+        .title {
+          margin: 9px 0 3px;
+          font-weight: 700;
+        }
+        .author {
+          font-size: 15px;
+          color: $blue;
+        }
+      }
+      .controls {
+        height: 36px;
+        display: flex;
+        align-items: flex-end;
+        span {
+          &:first-child {
+            padding-left: 0;
+          }
+          font-size: 14px;
+          padding: 0 16px;
+          border-left: 2px solid $lightgray;
+          color: $blue;
+        }
+      }
+    }
+    .right {
+      border: 1px solid green;
+      flex: 1;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,MAAM,EAAE,aAAa",
+"sources": ["../scss/books.scss"],
+"names": [],
+"file": "books.css"
+}

@@ -6,10 +6,22 @@ class BooksList extends Component {
     console.log('connect to redux later');
   }
 
+  renderBooks() {
+    // change later
+    return (<Book 
+      id={1} 
+      title={'Book Title'} 
+      category={'Category'}
+      author={'Book Author'}
+      complete={27}
+    />)
+  }
+ 
   render() {
-    // render books in a table, each row has id, title and category
     return (
-      <Book id={1} title={'test'} category={'test'}/>
+      <div className="books-list">
+        {this.renderBooks()}
+      </div>
     );
   }
 }
