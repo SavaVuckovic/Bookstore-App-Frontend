@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
@@ -81,22 +81,36 @@ class BooksForm extends Component {
   
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <input 
-          type="text" 
-          name="title" 
-          value={this.state.title}
-          onChange={this.handleChange.bind(this)}
-        />
-        <select 
-          name="category"
-          value={this.state.category}
-          onChange={this.handleChange.bind(this)}
-        >
-          {this.renderSelectOptions()}
-        </select>
-        <button type="submit">Add Book</button>
-      </form>
+      <Fragment>
+        <h3 className="add-book-title">Add new book</h3>
+        <form
+          className="new-book-form"
+          onSubmit={this.handleSubmit.bind(this)
+        }>
+          <input 
+            type="text" 
+            name="title"
+            placeholder="Title"
+            value={this.state.title}
+            onChange={this.handleChange.bind(this)}
+          />
+          <input 
+            type="text" 
+            name="author"
+            placeholder="Author"
+            value={this.state.author}
+            onChange={this.handleChange.bind(this)}
+          />
+          <select 
+            name="category"
+            value={this.state.category}
+            onChange={this.handleChange.bind(this)}
+          >
+            {this.renderSelectOptions()}
+          </select>
+          <button type="submit">Add Book</button>
+        </form>
+      </Fragment>
     );
   }
 }

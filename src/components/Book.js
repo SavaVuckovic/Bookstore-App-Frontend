@@ -20,6 +20,7 @@ const Book = ({ id, title, category, author, complete }) => (
       <CircularProgressbar
         percentage={complete}
         className="spinner"
+        styles={{ path: { stroke: '#0097f9' } }}
       />
       <div className="percent">
         <h1>{complete} %</h1>
