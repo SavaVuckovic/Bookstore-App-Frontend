@@ -5,7 +5,7 @@ Error: Undefined variable: "$white".
 7:   width: 100%;
 8:   overflow: auto;
 9:   background-color: rgba(0,0,0,0.1);
-10:   // display: none;
+10:   display: none;
 11:   .modal-content {
 12:     background: $white;
 13:     border: 1px solid $gray;
@@ -80,4 +80,4 @@ src/styles/scss/modal.scss:12
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$white\".\A         on line 12 of src/styles/scss/modal.scss\A \A 7:   width: 100%;\A 8:   overflow: auto;\A 9:   background-color: rgba(0,0,0,0.1);\A 10:   // display: none;\A 11:   .modal-content {\A 12:     background: $white;\A 13:     border: 1px solid $gray;\A 14:     border-radius: 4px;\A 15:     margin: 100px auto;\A 16:     width: 45%;\A 17:     animation-name: modalopen;"; }
+  content: "Error: Undefined variable: \"$white\".\A         on line 12 of src/styles/scss/modal.scss\A \A 7:   width: 100%;\A 8:   overflow: auto;\A 9:   background-color: rgba(0,0,0,0.1);\A 10:   display: none;\A 11:   .modal-content {\A 12:     background: $white;\A 13:     border: 1px solid $gray;\A 14:     border-radius: 4px;\A 15:     margin: 100px auto;\A 16:     width: 45%;\A 17:     animation-name: modalopen;"; }

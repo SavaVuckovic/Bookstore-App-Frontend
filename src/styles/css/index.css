@@ -30,7 +30,8 @@ body {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.1); }
+  background-color: rgba(0, 0, 0, 0.1);
+  display: none; }
   .modal .modal-content {
     background: #fff;
     border: 1px solid #888888;
