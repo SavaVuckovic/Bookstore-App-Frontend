@@ -1,0 +1,45 @@
+.modal {
+  position: fixed;
+  z-index: 1000!important;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.1);
+  // display: none;
+  .modal-content {
+    background: $white;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    margin: 100px auto;
+    width: 45%;
+    animation-name: modalopen;
+    animation-duration: 0.7s;
+    .modal-header {
+      padding: 12px;
+      background: $blue;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      display: flex;
+      align-items: center;
+      h2 {
+        color: $white;
+        font-size: 18px;
+        margin: 0;
+      }
+      .modal-close {
+        font-size: 32px;
+        color: $white;
+        margin-left: auto;
+      }
+    }
+    .modal-body {
+      padding: 12px;
+    }
+  }
+  @keyframes modalopen{
+    from{ opacity: 0}
+    to {opacity: 1}
+  }
+}

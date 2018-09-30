@@ -25,16 +25,22 @@ export default class Modal extends Component {
   }
 
   _render() {
+    const { header, children } = this.props;
+
     ReactDOM.render(
       <Provider store={store}>
         <div className="modal">
-          <div className="modal-header">
-            <h2>{this.props.header}</h2>
-            <span className="modal-close" onClick={this.closeModal.bind(this)}>&times;</span>
-            <div className="clearfix"/>
-          </div>
-          <div className="modal-body">
-            {this.props.children}
+          <div className="modal-content">
+            <div className="modal-header">
+              <h2>{header}</h2>
+              <span 
+                className="modal-close" 
+                onClick={this.closeModal.bind(this)}
+              >&times;</span>
+            </div>
+            <div className="modal-body">
+              {children}
+            </div>
           </div>
         </div>
       </Provider>, this.modalTarget

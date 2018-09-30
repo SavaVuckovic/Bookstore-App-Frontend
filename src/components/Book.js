@@ -1,6 +1,7 @@
 import React from 'react';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+// import Modal from './Modal';
 
 const Book = ({ id, title, category, author, complete }) => (
   <div className="book">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
+import Modal from './Modal';
 
 class App extends Component {
   render() {
@@ -11,6 +12,12 @@ class App extends Component {
         <div className="container">
           <BooksList/>
           <BooksForm/>
+
+          <Modal
+            header="Test"
+          >
+            Just a test
+          </Modal>
         </div>
       </div>
     );
