@@ -2,6 +2,44 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
+const fakeBooks = [
+  {
+    id: 1,
+    title: 'Fake Book 1',
+    author: 'Fake Author 1',
+    complete: 94,
+    category: 'History'
+  },
+  {
+    id: 2,
+    title: 'Fake Book 2',
+    author: 'Fake Author 2',
+    complete: 72,
+    category: 'Biography'
+  },
+  {
+    id: 3,
+    title: 'Fake Book 3',
+    author: 'Fake Author 3',
+    complete: 33,
+    category: 'Kids'
+  },
+  {
+    id: 4,
+    title: 'Fake Book 4',
+    author: 'Fake Author 4',
+    complete: 14,
+    category: 'Kids'
+  },
+  {
+    id: 5,
+    title: 'Fake Book 5',
+    author: 'Fake Author 5',
+    complete: 50,
+    category: 'Learning'
+  }
+];
+
 class BooksForm extends Component {
   constructor(props) {
     super(props);
@@ -9,6 +47,11 @@ class BooksForm extends Component {
       title: '',
       category: ''
     };
+  }
+
+  // just temporary uuntil data is fetched from the server
+  componentDidMount() {
+    fakeBooks.forEach(book => this.props.createBook(book));
   }
 
   renderSelectOptions() {

@@ -3,13 +3,10 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 
 class BooksList extends Component {
-  componentDidMount() {
-    console.log('connect to redux later');
-  }
-
   renderBooks() {
     return this.props.books.map(book => {
       const { id, title, category, author, complete } = book;
+      
       return (
         <Book
           key={id}

@@ -1,4 +1,6 @@
 import React from 'react';
+import CircularProgressbar from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({ id, title, category, author, complete }) => (
   <div className="book">
@@ -15,7 +17,10 @@ const Book = ({ id, title, category, author, complete }) => (
       </div>
     </div>
     <div className="right">
-      <div className="spinner"></div>
+      <CircularProgressbar
+        percentage={complete}
+        className="spinner"
+      />
       <div className="percent">
         <h1>{complete} %</h1>
         <span>Completed</span>

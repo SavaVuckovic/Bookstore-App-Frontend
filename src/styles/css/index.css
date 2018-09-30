@@ -95,8 +95,6 @@ body {
       .books-list .book .right .spinner {
         height: 68px;
         width: 68px;
-        background: blue;
-        border-radius: 50%;
         margin-right: 21px; }
       .books-list .book .right .percent h1 {
         margin: 12px 0 4px;
