@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import BooksList from '../containers/BooksList';
-import BooksForm from '../containers/BooksForm';
+import NewBookForm from '../containers/NewBookForm';
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
         <Navbar/>
         <div className="container">
           <BooksList/>
-          <BooksForm/>
+          <NewBookForm/>
         </div>
       </div>
     );

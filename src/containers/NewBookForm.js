@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
+// remove later when backend is created
 const fakeBooks = [
   {
     id: 1,
@@ -45,11 +46,12 @@ class BooksForm extends Component {
     super(props);
     this.state = {
       title: '',
+      author: '',
       category: ''
     };
   }
 
-  // just temporary uuntil data is fetched from the server
+  // just temporary until data is fetched from the server
   componentDidMount() {
     fakeBooks.forEach(book => this.props.createBook(book));
   }
@@ -67,14 +69,18 @@ class BooksForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const { title, author, category } = this.state;
     const book = {
       id: Math.random(),
-      title: this.state.title,
-      category: this.state.category
+      complete: 0,
+      title,
+      author,
+      category
     };
     this.props.createBook(book);
     this.setState({ 
       title: '',
+      author: '',
       category: ''
     });
   }

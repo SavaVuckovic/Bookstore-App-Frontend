@@ -7,16 +7,13 @@ class BooksList extends Component {
     return this.props.books.map(book => {
       const { id, title, category, author, complete } = book;
       
-      return (
-        <Book
-          key={id}
-          id={id}
-          title={title} 
-          category={category}
-          author={author}
-          complete={complete}
-        />
-      );
+      return <Book
+        key={id}
+        title={title} 
+        category={category}
+        author={author}
+        complete={complete}
+      />;
     });
   }
  
