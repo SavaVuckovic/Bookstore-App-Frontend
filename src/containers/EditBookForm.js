@@ -17,10 +17,10 @@ class EditBookForm extends Component {
     // fetch single book here 
     // just temporary
     this.setState({
-      title: 'Fake Book 1',
-      author: 'Fake Author 1',
-      complete: 94,
-      category: 'History'
+      title: 'Fake Book 2',
+      author: 'Fake Author 2',
+      complete: 72,
+      category: 'Biography'
     });
   }
 
@@ -58,7 +58,7 @@ class EditBookForm extends Component {
         onSubmit={this.handleSubmit.bind(this)}
       >
         <div className="form-group">
-          <label htmlFor="title">Book Title</label>
+          <label htmlFor="title">Title</label>
           <input
             type="text"
             name="title"
@@ -67,7 +67,7 @@ class EditBookForm extends Component {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="author">Book Author</label>
+          <label htmlFor="author">Author</label>
           <input
             type="text"
             name="author"
@@ -76,7 +76,7 @@ class EditBookForm extends Component {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="category">Book Category</label>
+          <label htmlFor="category">Category</label>
           <select 
             name="category"
             value={this.state.category}
@@ -84,6 +84,17 @@ class EditBookForm extends Component {
           >
             {this.renderSelectOptions()}
           </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="complete">Progress</label>
+          <input 
+            type="range" 
+            name="complete" 
+            min="0" 
+            max="100"
+            value={this.state.complete}
+            onChange={this.handleChange.bind(this)}
+          />
         </div>
         <button type="submit">Update Book</button>
       </form>
