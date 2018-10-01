@@ -94,53 +94,54 @@ body {
 .books-list {
   border-bottom: 2px solid #e8e8e8;
   padding: 36px 0 16px; }
-  .books-list .book {
-    border: 1.5px solid #e8e8e8;
-    background: #fff;
-    border-radius: 4px;
-    height: 170px;
-    padding: 24px;
-    display: flex;
-    margin-bottom: 16px; }
-    .books-list .book .left {
-      flex: 3; }
-      .books-list .book .left .info .category {
-        color: #888888;
-        margin: 0;
-        font-weight: 600; }
-      .books-list .book .left .info .title {
-        margin: 9px 0 3px;
-        font-weight: 700; }
-      .books-list .book .left .info .author {
-        font-size: 15px;
-        color: #0097f9; }
-      .books-list .book .left .controls {
-        height: 36px;
-        display: flex;
-        align-items: flex-end; }
-        .books-list .book .left .controls span {
-          font-size: 14px;
-          padding: 0 16px;
-          border-right: 2px solid #e8e8e8;
-          color: #0097f9; }
-          .books-list .book .left .controls span:first-child {
-            padding-left: 0; }
-          .books-list .book .left .controls span:last-child {
-            border: none; }
-    .books-list .book .right {
-      flex: 1;
+
+.book {
+  border: 1.5px solid #e8e8e8;
+  background: #fff;
+  border-radius: 4px;
+  height: 170px;
+  padding: 24px;
+  display: flex;
+  margin-bottom: 16px; }
+  .book .left {
+    flex: 3; }
+    .book .left .info .category {
+      color: #888888;
+      margin: 0;
+      font-weight: 600; }
+    .book .left .info .title {
+      margin: 9px 0 3px;
+      font-weight: 700; }
+    .book .left .info .author {
+      font-size: 15px;
+      color: #0097f9; }
+    .book .left .controls {
+      height: 36px;
       display: flex;
-      align-items: center;
-      justify-content: center; }
-      .books-list .book .right .spinner {
-        height: 68px;
-        width: 68px;
-        margin-right: 21px; }
-      .books-list .book .right .percent h1 {
-        margin: 12px 0 4px;
-        font-weight: 600; }
-      .books-list .book .right .percent span {
-        color: #888888; }
+      align-items: flex-end; }
+      .book .left .controls span {
+        font-size: 14px;
+        padding: 0 16px;
+        border-right: 2px solid #e8e8e8;
+        color: #0097f9; }
+        .book .left .controls span:first-child {
+          padding-left: 0; }
+        .book .left .controls span:last-child {
+          border: none; }
+  .book .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .book .right .spinner {
+      height: 68px;
+      width: 68px;
+      margin-right: 21px; }
+    .book .right .percent h1 {
+      margin: 12px 0 4px;
+      font-weight: 600; }
+    .book .right .percent span {
+      color: #888888; }
 
 .add-book-title {
   margin-top: 32px;

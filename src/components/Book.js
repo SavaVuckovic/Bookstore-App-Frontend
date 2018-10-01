@@ -5,7 +5,7 @@ import DeleteBookForm from '../containers/DeleteBookForm';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-class Book extends Component {
+export default class Book extends Component {
   showModal(name) {
     this.refs[name].modalTarget.style.display = 'block';
   }
@@ -56,5 +56,3 @@ class Book extends Component {
     );
   }
 }
-
-export default Book;
