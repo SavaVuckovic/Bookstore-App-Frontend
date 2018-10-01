@@ -16,9 +16,10 @@ export function updateBook(book) {
   };
 }
 
-export function removeBook(book) {
+export function removeBook(id) {
+  console.log(id);
   return {
     type: REMOVE_BOOK,
-    payload: book
+    payload: id
   };
 }

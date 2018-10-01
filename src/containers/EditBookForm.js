@@ -49,6 +49,10 @@ class EditBookForm extends Component {
       category: '',
       complete: ''
     });
+    // close modal
+    if (this.props.callback) {
+      this.props.callback();
+    }
   }
 
   render() {

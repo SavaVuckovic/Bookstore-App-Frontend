@@ -1,12 +1,17 @@
 import React, { Component, Fragment } from 'react';
-import CircularProgressbar from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import Modal from './Modal';
 import EditBookForm from '../containers/EditBookForm';
+import DeleteBookForm from '../containers/DeleteBookForm';
+import CircularProgressbar from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 class Book extends Component {
   showModal(name) {
-    this.refs[name].modalTarget.style.display = 'block'
+    this.refs[name].modalTarget.style.display = 'block';
+  }
+
+  closeModal(name) {
+    this.refs[name].modalTarget.style.display = 'none'
   }
 
   render() {
@@ -41,11 +46,11 @@ class Book extends Component {
         </div>
 
         <Modal ref="edit" header="Edit Book">
-          <EditBookForm />
+          <EditBookForm id={id} callback={() => this.closeModal('edit')}/>
         </Modal>
 
         <Modal ref="delete" header="Delete Book">
-          Delete Test
+          <DeleteBookForm id={id} callback={() => this.closeModal('delete')}/>
         </Modal>
       </Fragment>
     );

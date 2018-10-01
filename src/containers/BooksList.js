@@ -8,6 +8,7 @@ class BooksList extends Component {
       const { id, title, category, author, complete } = book;
       
       return <Book
+        id={id}
         key={id}
         title={title} 
         category={category}
