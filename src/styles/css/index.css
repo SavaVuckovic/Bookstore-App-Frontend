@@ -78,12 +78,18 @@ body {
         font-weight: 800;
         color: #0097f9;
         margin-right: 16px;
-        text-transform: none; }
-      .navbar .container .links span {
+        text-transform: none;
+        text-decoration: none; }
+        .navbar .container .links .logo:hover {
+          text-decoration: underline; }
+      .navbar .container .links .nav-link {
         text-transform: uppercase;
         margin: 16px;
         font-size: 16px;
-        color: #888888; }
+        color: #888888;
+        text-decoration: none; }
+        .navbar .container .links .nav-link:hover {
+          text-decoration: underline; }
     .navbar .container .logged-user {
       width: 45px;
       height: 45px;

@@ -1,6 +1,8 @@
-export const CREATE_BOOK = 'CREATE_BOOK';
-export const UPDATE_BOOK = 'UPDATE_BOOK';
-export const REMOVE_BOOK = 'REMOVE_BOOK';
+import {
+  CREATE_BOOK,
+  UPDATE_BOOK,
+  REMOVE_BOOK
+} from './types';
 
 export function createBook(book) {
   return {

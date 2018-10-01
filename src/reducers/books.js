@@ -2,18 +2,16 @@ import {
   CREATE_BOOK,
   UPDATE_BOOK,
   REMOVE_BOOK 
-} from '../actions';
+} from '../actions/types';
 
 export default function booksReducer(state = [], action) {
   switch(action.type) {
     case CREATE_BOOK:
       return [...state, action.payload];
     case UPDATE_BOOK:
-      // later
-      console.log(action.payload);
-      return state;
+      const newState = state.filter(b => b.id !== action.payload.id);
+      return [...newState, action.payload];
     case REMOVE_BOOK:
-      console.log(action.payload);
       return state.filter(b => b.id !== action.payload);
     default:
       return state;
