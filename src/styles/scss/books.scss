@@ -1,6 +1,6 @@
 .books-list {
   border-bottom: 2px solid $lightgray; 
-  padding: 36px 0 16px;
+  padding-bottom: 16px;
 }
 
 .book {
@@ -32,10 +32,16 @@
       height: 36px;
       display: flex;
       align-items: flex-end;
-      span {
+      .comments-link {
+        display: block;
+        border-right: 2px solid $lightgray;
+        text-decoration: none;
+      }
+      .ctrlbtn {
         &:first-child {
           padding-left: 0;
         }
+        cursor: pointer;
         font-size: 14px;
         padding: 0 16px;
         border-right: 2px solid $lightgray;

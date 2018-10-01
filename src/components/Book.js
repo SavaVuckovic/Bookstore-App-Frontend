@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import Modal from './Modal';
 import EditBookForm from '../containers/EditBookForm';
 import DeleteBookForm from '../containers/DeleteBookForm';
@@ -27,9 +28,11 @@ export default class Book extends Component {
               <span className="author">{author}</span>
             </div>
             <div className="controls">
-              <span>Comments</span>
-              <span onClick={() => this.showModal('delete')}>Remove</span>
-              <span onClick={() => this.showModal('edit')}>Edit</span>
+              <Link className="comments-link" to={`/books/${id}`}>
+                <span className="ctrlbtn">Comments</span>
+              </Link>
+              <span className="ctrlbtn" onClick={() => this.showModal('delete')}>Remove</span>
+              <span className="ctrlbtn" onClick={() => this.showModal('edit')}>Edit</span>
             </div>
           </div>
           <div className="right">

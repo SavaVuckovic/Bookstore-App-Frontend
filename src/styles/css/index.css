@@ -65,7 +65,8 @@ body {
 .navbar {
   background: #fff;
   height: 95px;
-  border-bottom: 2px solid #e8e8e8; }
+  border-bottom: 2px solid #e8e8e8;
+  margin-bottom: 36px; }
   .navbar .container {
     display: flex;
     align-items: center;
@@ -99,7 +100,7 @@ body {
 
 .books-list {
   border-bottom: 2px solid #e8e8e8;
-  padding: 36px 0 16px; }
+  padding-bottom: 16px; }
 
 .book {
   border: 1.5px solid #e8e8e8;
@@ -125,14 +126,19 @@ body {
       height: 36px;
       display: flex;
       align-items: flex-end; }
-      .book .left .controls span {
+      .book .left .controls .comments-link {
+        display: block;
+        border-right: 2px solid #e8e8e8;
+        text-decoration: none; }
+      .book .left .controls .ctrlbtn {
+        cursor: pointer;
         font-size: 14px;
         padding: 0 16px;
         border-right: 2px solid #e8e8e8;
         color: #0097f9; }
-        .book .left .controls span:first-child {
+        .book .left .controls .ctrlbtn:first-child {
           padding-left: 0; }
-        .book .left .controls span:last-child {
+        .book .left .controls .ctrlbtn:last-child {
           border: none; }
   .book .right {
     flex: 1;

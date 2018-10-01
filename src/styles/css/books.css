@@ -4,7 +4,7 @@ Error: Undefined variable: "$lightgray".
 
 1: .books-list {
 2:   border-bottom: 2px solid $lightgray; 
-3:   padding: 36px 0 16px;
+3:   padding-bottom: 16px;
 4: }
 5: 
 6: .book {
@@ -69,4 +69,4 @@ src/styles/scss/books.scss:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightgray\".\A         on line 2 of src/styles/scss/books.scss\A \A 1: .books-list {\A 2:   border-bottom: 2px solid $lightgray; \A 3:   padding: 36px 0 16px;\A 4: }\A 5: \A 6: .book {\A 7:   border: 1.5px solid $lightgray;"; }
+  content: "Error: Undefined variable: \"$lightgray\".\A         on line 2 of src/styles/scss/books.scss\A \A 1: .books-list {\A 2:   border-bottom: 2px solid $lightgray; \A 3:   padding-bottom: 16px;\A 4: }\A 5: \A 6: .book {\A 7:   border: 1.5px solid $lightgray;"; }
