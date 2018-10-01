@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 
-class BooksList extends Component {
+class BookList extends Component {
   renderBooks() {
     return this.props.books.map(book => {
       const { id, title, category, author, complete } = book;
@@ -30,4 +30,4 @@ class BooksList extends Component {
 const mapStateToProps = ({ books }) => {
   return { books };
 };
-export default connect(mapStateToProps)(BooksList);
+export default connect(mapStateToProps)(BookList);

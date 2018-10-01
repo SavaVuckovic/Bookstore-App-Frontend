@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar';
-import BooksList from '../containers/BooksList';
-import NewBookForm from '../containers/NewBookForm';
+import IndexPage from '../pages/IndexPage';
+import CategoriesPage from '../pages/CategoriesPage';
+import SingleBookPage from '../pages/SingleBookPage';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar/>
-        <div className="container">
-          <BooksList/>
-          <NewBookForm/>
-        </div>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Fragment>
+    <Navbar/>
+    <div className="container">
+      <Switch>
+        <Route exact path="/" component={IndexPage}/>
+        <Route path="/books/:id" component={SingleBookPage}/>
+        <Route path="/categories" component={CategoriesPage}/> 
+      </Switch>
+    </div>
+  </Fragment>
+);
 
 export default App;

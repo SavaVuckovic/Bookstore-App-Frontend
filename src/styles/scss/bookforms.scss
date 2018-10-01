@@ -70,3 +70,21 @@
     margin: 0 auto;
   }
 }
+.delete-book-form {
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+  button {
+    padding: 16px;
+    width: 150px;
+    background: $red;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+  }
+}
