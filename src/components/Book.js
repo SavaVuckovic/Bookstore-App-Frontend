@@ -2,12 +2,10 @@ import React, { Component, Fragment } from 'react';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Modal from './Modal';
+import EditBookForm from '../containers/EditBookForm';
 
 class Book extends Component {
   showModal(name) {
-    // name === 'edit'
-    //   ? this.refs.edit.style.display = 'block'
-    //   : this.refs.delete.style.display = 'block';
     this.refs[name].modalTarget.style.display = 'block'
   }
 
@@ -16,7 +14,7 @@ class Book extends Component {
 
     return (
       <Fragment>
-          <div className="book">
+        <div className="book">
           <div className="left">
             <div className="info">
               <h4 className="category">{category}</h4>
@@ -43,7 +41,7 @@ class Book extends Component {
         </div>
 
         <Modal ref="edit" header="Edit Book">
-          Edit Test
+          <EditBookForm />
         </Modal>
 
         <Modal ref="delete" header="Delete Book">

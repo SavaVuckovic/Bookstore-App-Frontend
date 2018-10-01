@@ -41,7 +41,7 @@ const fakeBooks = [
   }
 ];
 
-class BooksForm extends Component {
+class NewBookForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,6 +57,7 @@ class BooksForm extends Component {
   }
 
   renderSelectOptions() {
+    // extract categories to redux state later 
     const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
     return categories.map((cat, index) => <option key={index}>{cat}</option>);
   }
@@ -69,13 +70,10 @@ class BooksForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { title, author, category } = this.state;
     const book = {
       id: Math.random(),
       complete: 0,
-      title,
-      author,
-      category
+      ...this.state
     };
     this.props.createBook(book);
     this.setState({ 
@@ -91,8 +89,8 @@ class BooksForm extends Component {
         <h3 className="add-book-title">Add new book</h3>
         <form
           className="new-book-form"
-          onSubmit={this.handleSubmit.bind(this)
-        }>
+          onSubmit={this.handleSubmit.bind(this)}
+        >
           <input 
             type="text" 
             name="title"
@@ -121,4 +119,4 @@ class BooksForm extends Component {
   }
 }
 
-export default connect(null, { createBook })(BooksForm);
+export default connect(null, { createBook })(NewBookForm);
