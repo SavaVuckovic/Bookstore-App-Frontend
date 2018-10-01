@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import userImg from '../images/defaultuser.png';
 
 export default class Comment extends Component {
   render() {
@@ -6,8 +7,12 @@ export default class Comment extends Component {
 
     return (
       <div className="comment">
-        <h3>{author}</h3>
-        <h3>{text}</h3>
+        <div className="author">
+          <img src={userImg} alt="user"/>
+          <span>{author}</span>
+        </div>
+        <p className="body">{text}</p>
+        <div className="clearfix"/>
       </div>
     );
   }
