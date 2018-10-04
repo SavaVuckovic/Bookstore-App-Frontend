@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
-// remove later when backend is created
+// REMOVE LATER
 const fakeBooks = [
   {
     id: 1,
@@ -51,13 +51,13 @@ class NewBookForm extends Component {
     };
   }
 
-  // just temporary until data is fetched from the server
+  // JUST TEMP SOLUTION UNTIL DATA IS FETCHED FROM SERVER
   componentDidMount() {
     fakeBooks.forEach(book => this.props.createBook(book));
   }
 
   renderSelectOptions() {
-    // extract categories to redux state later 
+    // EXTRACT CATEGORIES TO STATE LATER
     const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
     return categories.map((cat, index) => <option key={index}>{cat}</option>);
   }
@@ -70,12 +70,15 @@ class NewBookForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // create a new book object
     const book = {
       id: Math.random(),
       complete: 0,
       ...this.state
     };
+    // create action
     this.props.createBook(book);
+    // reset state
     this.setState({ 
       title: '',
       author: '',

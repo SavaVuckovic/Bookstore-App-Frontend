@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Comment from '../components/Comment';
 
-// fake data for now
+// TEMP FAKE DATA
 const comments = [
   {
     id: 1,
@@ -23,7 +23,7 @@ const comments = [
 
 class CommentList extends Component {
   renderComments() {
-    // temp solution
+    // TEMP SOLUTION, COMMENTS WILL COME FROM PROPS LATER 
     // return this.props.comments.map(comment => { LATER
 
     return comments.map(comment => {

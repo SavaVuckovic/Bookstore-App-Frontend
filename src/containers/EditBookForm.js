@@ -14,8 +14,7 @@ class EditBookForm extends Component {
   }
 
   componentDidMount() {
-    // fetch single book here 
-    // just temporary
+    // TEMP SELECTING A SINGLE FAKE BOOK
     this.setState({
       title: 'Fake Book 2',
       author: 'Fake Author 2',
@@ -25,11 +24,11 @@ class EditBookForm extends Component {
   }
 
   renderSelectOptions() {
-    // extract categories to redux state later 
+    // CATEGORIES WILL LATER COME FROM STATE
     const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
     return categories.map((cat, index) => <option key={index}>{cat}</option>);
   }
-
+  
   handleChange(e) {
     let change = {};
     change[e.target.name] = e.target.value;
@@ -38,11 +37,14 @@ class EditBookForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // create a new book object
     const book = {
       id: this.props.id,
       ...this.state
     }
+    // update action
     this.props.updateBook(book);
+    // reset state
     this.setState({
       title: '',
       author: '',

@@ -4,7 +4,7 @@ import CommentList from '../containers/CommentList';
 
 export default class SingleBookPage extends Component {
   render() {
-    // change fake data later
+    // FAKE BOOK DATA FOR NOW
     return (
       <Fragment>
         <Book
