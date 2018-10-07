@@ -1,13 +1,21 @@
+import axios from 'axios';
 import {
   GET_CATEGORIES,
   CREATE_CATEGORY,
   REMOVE_CATEGORY
 } from './types';
 
-export function getCategories() {
-  // LATER
-  return null;
-}
+const API_URL = 'http://localhost:5000';
+
+export const getCategories = () => dispatch => {
+  axios.get(`${API_URL}/categories`)
+    .then(res => {
+      dispatch({
+        type: GET_CATEGORIES,
+        payload: res.data
+      });
+    });
+};
 
 export function createCategory(category) {
   return {
