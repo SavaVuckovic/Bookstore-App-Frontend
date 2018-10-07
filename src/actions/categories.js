@@ -5,10 +5,10 @@ import {
   REMOVE_CATEGORY
 } from './types';
 
-const API_URL = 'http://localhost:5000';
+const ROOT_URL = 'http://localhost:5000';
 
 export const getCategories = () => dispatch => {
-  axios.get(`${API_URL}/categories`)
+  axios.get(`${ROOT_URL}/categories`)
     .then(res => {
       dispatch({
         type: GET_CATEGORIES,

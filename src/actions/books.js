@@ -1,3 +1,4 @@
+import axios from 'axios';
 import {
   GET_BOOKS,
   GET_SINGLE_BOOK,
@@ -6,22 +7,32 @@ import {
   REMOVE_BOOK
 } from './types';
 
-export function getBooks() {
-  // LATER
-  return 0;
-}
+const ROOT_URL = 'http://localhost:5000';
+
+export const getBooks = () => dispatch => {
+  axios.get(`${ROOT_URL}/books`)
+    .then(res => {
+      dispatch({
+        type: GET_BOOKS,
+        payload: res.data
+      });
+    });
+};
 
 export function getSingleBook() {
   // LATER
   return 0;
 }
 
-export function createBook(book) {
-  return {
-    type: CREATE_BOOK,
-    payload: book
-  };
-}
+export const createBook = book => dispatch => {
+  axios.post(`${ROOT_URL}/books`, book)
+    .then(res => {
+      dispatch({
+        type: CREATE_BOOK,
+        payload: res.data
+      });
+    });
+};
 
 export function updateBook(book) {
   return {

@@ -28,7 +28,6 @@ class NewBookForm extends Component {
     e.preventDefault();
     // create a new book object
     const book = {
-      id: Math.random(),
       complete: 0,
       ...this.state
     };
