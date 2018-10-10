@@ -1,18 +1,25 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { getSingleBook } from '../actions';
 import Modal from './Modal';
 import EditBookForm from '../containers/EditBookForm';
 import DeleteBookForm from '../containers/DeleteBookForm';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-export default class Book extends Component {
+class Book extends Component {
   showModal(name) {
     this.refs[name].modalTarget.style.display = 'block';
   }
 
   closeModal(name) {
     this.refs[name].modalTarget.style.display = 'none'
+  }
+
+  handleEditClick() {
+    this.showModal('edit');
+    this.props.getSingleBook(this.props.id);
   }
 
   render() {
@@ -32,7 +39,7 @@ export default class Book extends Component {
                 <span className="ctrlbtn">Comments</span>
               </Link>
               <span className="ctrlbtn" onClick={() => this.showModal('delete')}>Remove</span>
-              <span className="ctrlbtn" onClick={() => this.showModal('edit')}>Edit</span>
+              <span className="ctrlbtn" onClick={this.handleEditClick.bind(this)}>Edit</span>
             </div>
           </div>
           <div className="right">
@@ -59,3 +66,5 @@ export default class Book extends Component {
     );
   }
 }
+
+export default connect(null, { getSingleBook })(Book);

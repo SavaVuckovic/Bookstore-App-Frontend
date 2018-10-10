@@ -50,11 +50,14 @@ export const createBook = book => dispatch => {
     });
 };
 
-export function updateBook(book) {
-  return {
-    type: UPDATE_BOOK,
-    payload: book
-  };
+export const updateBook = book => dispatch => {
+  axios.put(`${ROOT_URL}/books/${book.id}`, book)
+    .then(res => {
+      dispatch({
+        type: UPDATE_BOOK,
+        payload: res.data
+      });
+    });
 }
 
 export function removeBook(id) {

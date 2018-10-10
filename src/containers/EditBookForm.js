@@ -13,20 +13,8 @@ class EditBookForm extends Component {
     };
   }
 
-  componentDidMount() {
-    // TEMP SELECTING A SINGLE FAKE BOOK
-    this.setState({
-      title: 'Fake Book 2',
-      author: 'Fake Author 2',
-      complete: 72,
-      category: 'Biography'
-    });
-  }
-
   renderSelectOptions() {
-    // CATEGORIES WILL LATER COME FROM STATE
-    const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
-    return categories.map((cat, index) => <option key={index}>{cat}</option>);
+    return this.props.categories.map(cat => <option key={cat.id}>{cat.name}</option>);
   }
   
   handleChange(e) {
@@ -63,6 +51,7 @@ class EditBookForm extends Component {
         className="edit-book-form"
         onSubmit={this.handleSubmit.bind(this)}
       >
+      <h1>TEST {this.props.activeBook.title}</h1>
         <div className="form-group">
           <label htmlFor="title">Title</label>
           <input
@@ -108,4 +97,8 @@ class EditBookForm extends Component {
   }
 }
 
-export default connect(null, { updateBook })(EditBookForm);
+const mapStateToProps = ({ categories, activeBook }) => {
+  return { categories, activeBook };
+}
+
+export default connect(mapStateToProps, { updateBook })(EditBookForm);

@@ -13,9 +13,7 @@ class NewBookForm extends Component {
   }
 
   renderSelectOptions() {
-    // EXTRACT CATEGORIES TO STATE LATER
-    const categories = ["Action", "Biography", "History", "Horror", "Kids", "Learning", "Sci-Fi"];
-    return categories.map((cat, index) => <option key={index}>{cat}</option>);
+    return this.props.categories.map(cat => <option key={cat.id}>{cat.name}</option>);
   }
 
   handleChange(e) {
@@ -77,4 +75,8 @@ class NewBookForm extends Component {
   }
 }
 
-export default connect(null, { createBook })(NewBookForm);
+const mapStateToProps = ({ categories }) => {
+  return { categories };
+}
+
+export default connect(mapStateToProps, { createBook })(NewBookForm);
