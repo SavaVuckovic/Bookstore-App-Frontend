@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   GET_BOOKS,
   GET_SINGLE_BOOK,
+  GET_BOOKS_BY_CATEGORY,
   CREATE_BOOK,
   UPDATE_BOOK,
   REMOVE_BOOK
@@ -20,6 +21,11 @@ export const getBooks = () => dispatch => {
 };
 
 export function getSingleBook() {
+  // LATER
+  return 0;
+}
+
+export function getBooksByCategory() {
   // LATER
   return 0;
 }

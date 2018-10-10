@@ -1,6 +1,7 @@
 // books
 export const GET_BOOKS = 'GET_BOOKS';
 export const GET_SINGLE_BOOK = 'GET_SINGLE_BOOK';
+export const GET_BOOKS_BY_CATEGORY = 'GET_BOOKS_BY_CATEGORY';
 export const CREATE_BOOK = 'CREATE_BOOK';
 export const UPDATE_BOOK = 'UPDATE_BOOK';
 export const REMOVE_BOOK = 'REMOVE_BOOK';

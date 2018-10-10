@@ -1,4 +1,7 @@
 import { 
+  GET_BOOKS,
+  GET_SINGLE_BOOK,
+  GET_BOOKS_BY_CATEGORY,
   CREATE_BOOK,
   UPDATE_BOOK,
   REMOVE_BOOK 
@@ -6,6 +9,8 @@ import {
 
 export default function booksReducer(state = [], action) {
   switch(action.type) {
+    case GET_BOOKS:
+      return action.payload;
     case CREATE_BOOK:
       return [...state, action.payload];
     case UPDATE_BOOK:
