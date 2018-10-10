@@ -12,6 +12,5 @@ export const CREATE_CATEGORY = 'CREATE_CATEGORY';
 export const REMOVE_CATEGORY = 'REMOVE_CATEGORY';
 
 // comments
-export const GET_COMMENTS = 'GET_COMMENTS';
 export const CREATE_COMMENT = 'CREATE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';

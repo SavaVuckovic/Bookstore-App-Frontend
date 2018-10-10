@@ -60,9 +60,12 @@ export const updateBook = book => dispatch => {
     });
 }
 
-export function removeBook(id) {
-  return {
-    type: REMOVE_BOOK,
-    payload: id
-  };
+export const removeBook = book_id => dispatch => {
+  axios.delete(`${ROOT_URL}/books/${book_id}`)
+    .then(res => {
+      dispatch({
+        type: REMOVE_BOOK,
+        payload: book_id
+      });
+    });
 }

@@ -1,19 +1,16 @@
-import {
-  GET_COMMENTS,
-  CREATE_COMMENT,
-  REMOVE_COMMENT
-} from './types';
+import axios from 'axios';
+import { CREATE_COMMENT, REMOVE_COMMENT } from './types';
 
-export function getComments() {
-  // LATER
-  return 0;
-}
+const ROOT_URL = 'http://localhost:5000';
 
-export function createComment(comment) {
-  return {
-    type: CREATE_COMMENT,
-    payload: comment
-  };
+export const createComment = comment => dispatch => {
+  axios.post(`${ROOT_URL}/comments`, comment)
+    .then(res => {
+      dispatch({
+        type: CREATE_COMMENT,
+        payload: res.data
+      });
+    });
 }
 
 export function removeComment(id) {
