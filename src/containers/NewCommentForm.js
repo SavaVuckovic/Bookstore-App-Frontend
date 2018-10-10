@@ -12,12 +12,14 @@ class NewCommentForm extends Component {
   }
 
   handleChange(e) {
-    this.setState({ text: e.target.value });
+    let change = {};
+    change[e.target.name] = e.target.value;
+    this.setState(change);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createComment({ ...this.state, post_id: this.props.postID });
+    this.props.createComment({ ...this.state, book_id: this.props.bookID });
     this.setState({
       author: '',
       text: ''
@@ -34,6 +36,7 @@ class NewCommentForm extends Component {
         >
           <input
             type="text"
+            name="author"
             placeholder="Comment Author"
             value={this.state.author}
             onChange={this.handleChange.bind(this)}

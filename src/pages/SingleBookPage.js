@@ -22,7 +22,7 @@ class SingleBookPage extends Component {
           author={author}
           complete={complete}
         />
-        <NewCommentForm postID={id}/>
+        <NewCommentForm bookID={id}/>
         <CommentList/>
       </Fragment>
     );
