@@ -20,14 +20,24 @@ export const getBooks = () => dispatch => {
     });
 };
 
-export function getSingleBook() {
-  // LATER
-  return 0;
+export const getSingleBook = book_id => dispatch => {
+  axios.get(`${ROOT_URL}/books/${book_id}`)
+    .then(res => {
+      dispatch({
+        type: GET_SINGLE_BOOK,
+        payload: res.data
+      });
+    });
 }
 
-export function getBooksByCategory() {
-  // LATER
-  return 0;
+export const getBooksByCategory = category_id => dispatch => {
+  axios.get(`${ROOT_URL}/categories/${category_id}/books`)
+    .then(res => {
+      dispatch({
+        type: GET_BOOKS_BY_CATEGORY,
+        payload: res.data
+      });
+    });
 }
 
 export const createBook = book => dispatch => {
