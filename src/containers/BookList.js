@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getBooks } from '../actions';
+import { getBooks, getBooksByCategory } from '../actions';
 import Book from '../components/Book';
 
 class BookList extends Component {
   componentDidMount() {
-    this.props.getBooks();
+    const { getBooks, getBooksByCategory, activeCategory } = this.props;
+    Object.keys(activeCategory).length === 0 ? getBooks() : getBooksByCategory(activeCategory.id);
   }
 
   renderBooks() {
@@ -32,7 +33,7 @@ class BookList extends Component {
   }
 }
 
-const mapStateToProps = ({ books }) => {
-  return { books };
+const mapStateToProps = ({ books, activeCategory }) => {
+  return { books, activeCategory };
 };
-export default connect(mapStateToProps, { getBooks })(BookList);
+export default connect(mapStateToProps, { getBooks, getBooksByCategory })(BookList);
