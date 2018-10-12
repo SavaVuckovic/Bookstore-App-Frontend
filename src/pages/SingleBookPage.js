@@ -7,6 +7,7 @@ import NewCommentForm from '../containers/NewCommentForm';
 
 class SingleBookPage extends Component {
   componentDidMount() {
+    // get the book to show by id passed in params
     this.props.getSingleBook(this.props.match.params.id);
   }
 

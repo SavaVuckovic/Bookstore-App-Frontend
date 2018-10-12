@@ -1,0 +1,35 @@
+.new-comment-form {
+  margin-bottom: 24px;
+  display: flex;
+  input {
+    flex: 1;
+    margin-right: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid $lightgray;
+    font-size: 16px;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  textarea {
+    flex: 3;
+    margin-right: 16px;
+    border-radius: 4px;
+    border: 1px solid $lightgray;
+    font-size: 14px;
+    padding: 12px;
+    min-height: 58px;
+    max-height: 158px;
+  }
+  button {
+    padding: 16px;
+    width: 150px;
+    background: $blue;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}

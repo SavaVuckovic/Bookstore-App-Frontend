@@ -10,6 +10,11 @@ body {
 .clearfix {
   clear: both; }
 
+.form-title {
+  margin-top: 32px;
+  text-transform: uppercase;
+  color: #888888; }
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -158,11 +163,6 @@ body {
     .book .right .percent span {
       color: #888888; }
 
-.add-book-title {
-  margin-top: 32px;
-  text-transform: uppercase;
-  color: #888888; }
-
 .new-book-form {
   margin-bottom: 128px;
   display: flex; }
@@ -260,5 +260,36 @@ body {
     .comments-list .comment .body {
       margin: 10px 0 5px;
       font-size: 15px; }
+
+.new-comment-form {
+  margin-bottom: 24px;
+  display: flex; }
+  .new-comment-form input {
+    flex: 1;
+    margin-right: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    font-size: 16px; }
+    .new-comment-form input::placeholder {
+      color: #888888; }
+  .new-comment-form textarea {
+    flex: 3;
+    margin-right: 16px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    padding: 12px;
+    min-height: 58px;
+    max-height: 158px; }
+  .new-comment-form button {
+    padding: 16px;
+    width: 150px;
+    background: #0097f9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600; }
 
 /*# sourceMappingURL=index.css.map */

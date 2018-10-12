@@ -29,7 +29,7 @@ class NewCommentForm extends Component {
   render() {
     return (
       <Fragment>
-        <h3 className="add-comment-title">Add new comment</h3>
+        <h3 className="form-title">Add new comment</h3>
         <form
           className="new-comment-form"
           onSubmit={this.handleSubmit.bind(this)}

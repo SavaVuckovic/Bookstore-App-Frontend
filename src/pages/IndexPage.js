@@ -1,12 +1,22 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { getCategories } from '../actions';
 import BookList from '../containers/BookList';
 import NewBookForm from '../containers/NewBookForm';
 
-const IndexPage = () => (
-  <Fragment>
-    <BookList/>
-    <NewBookForm/>
-  </Fragment>
-);
+class IndexPage extends Component {
+  componentDidMount() {
+    this.props.getCategories();
+  }
 
-export default IndexPage;
+  render() {
+    return (
+      <Fragment>
+        <BookList/>
+        <NewBookForm/>
+      </Fragment>
+    );
+  }
+}
+
+export default connect(null, { getCategories })(IndexPage);

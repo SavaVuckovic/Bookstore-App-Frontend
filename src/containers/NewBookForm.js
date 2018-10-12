@@ -42,7 +42,7 @@ class NewBookForm extends Component {
   render() {
     return (
       <Fragment>
-        <h3 className="add-book-title">Add new book</h3>
+        <h3 className="form-title">Add new book</h3>
         <form
           className="new-book-form"
           onSubmit={this.handleSubmit.bind(this)}
