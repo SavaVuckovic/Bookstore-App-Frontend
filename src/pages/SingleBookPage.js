@@ -1,17 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { getSingleBook, getBookComments } from '../actions';
+import { getSingleBook, getBookComments, getCategories } from '../actions';
 import Book from '../components/Book';
 import CommentList from '../containers/CommentList';
 import NewCommentForm from '../containers/NewCommentForm';
 
 class SingleBookPage extends Component {
   componentDidMount() {
-    const { getSingleBook, getBookComments } = this.props;
+    const { getSingleBook, getBookComments, getCategories } = this.props;
     const id = this.props.match.params.id;
     // get the book to show by id passed in params
     getSingleBook(id);
     getBookComments(id);
+    getCategories();
   }
 
   render() {
@@ -31,4 +32,8 @@ const mapStateToProps = ({ activeBook }) => {
 }
 
 
-export default connect(mapStateToProps, { getSingleBook, getBookComments })(SingleBookPage);
+export default connect(mapStateToProps, { 
+  getSingleBook, 
+  getBookComments,
+  getCategories 
+})(SingleBookPage);

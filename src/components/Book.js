@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getSingleBook } from '../actions';
 import Modal from './Modal';
@@ -20,6 +20,12 @@ class Book extends Component {
   handleEditClick() {
     this.showModal('edit');
     this.props.getSingleBook(this.props.book.id);
+  }
+
+  deleteBookCallback() {
+    this.closeModal('delete');
+    console.log('CALLED');
+    this.props.history.push('/');
   }
 
   render() {
@@ -60,11 +66,11 @@ class Book extends Component {
         </Modal>
 
         <Modal ref="delete" header="Delete Book">
-          <DeleteBookForm id={id} callback={() => this.closeModal('delete')}/>
+          <DeleteBookForm id={id} callback={this.deleteBookCallback.bind(this)}/>
         </Modal>
       </Fragment>
     );
   }
 }
 
-export default connect(null, { getSingleBook })(Book);
+export default withRouter(connect(null, { getSingleBook })(Book));
