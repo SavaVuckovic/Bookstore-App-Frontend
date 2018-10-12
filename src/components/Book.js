@@ -23,7 +23,7 @@ class Book extends Component {
   }
 
   render() {
-    const { id, title, category, author, complete } = this.props;
+    const { id, title, category, author, complete } = this.props.book;
 
     return (
       <Fragment>
