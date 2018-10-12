@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { setActiveCategory } from '../actions';
 import Modal from '../components/Modal';
 import DeleteCategoryForm from './DeleteCategoryForm';
 
-export default class Category extends Component {
+class Category extends Component {
   toggleModal() {
     const modal = this.refs.delete.modalTarget;
     if (modal.style.display !== 'block') {
@@ -10,14 +12,14 @@ export default class Category extends Component {
     } else {
       modal.style.display = 'none';
     }
-  } 
+  }
 
   render() {
     const { id, name } = this.props.category;
     return (
       <Fragment>
         <div className="category">
-          <h4>{name}</h4>
+          <h4 onClick={() => this.props.setActiveCategory(this.props.category)}>{name}</h4>
           <div className="delete-icon-wrapper" onClick={this.toggleModal.bind(this)}>
             <i className="fas fa-trash-alt"></i>
           </div>
@@ -30,3 +32,5 @@ export default class Category extends Component {
     );
   }
 }
+
+export default connect(null, { setActiveCategory })(Category);

@@ -9,6 +9,12 @@ class BookList extends Component {
     Object.keys(activeCategory).length === 0 ? getBooks() : getBooksByCategory(activeCategory.id);
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.activeCategory !== prevProps.activeCategory) {
+      this.props.getBooksByCategory(this.props.activeCategory.id);
+    }
+  }
+
   renderBooks() {
     return this.props.books.map(book => <Book key={book.id} book={book}/>);
   }
