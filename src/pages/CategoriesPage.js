@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getCategories } from '../actions';
 import CategoryList from '../containers/CategoryList';
 import BookList from '../containers/BookList';
+import NewCategoryForm from '../containers/NewCategoryForm';
 
 class CategoriesPage extends Component {
   componentDidMount() {
@@ -12,6 +13,7 @@ class CategoriesPage extends Component {
   render() {
     return (
       <Fragment>
+        <NewCategoryForm/>
         <CategoryList/>
         <BookList/>
       </Fragment>

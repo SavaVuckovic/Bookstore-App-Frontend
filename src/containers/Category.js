@@ -10,11 +10,13 @@ export default class Category extends Component {
   }
 
   render() {
-    const { id, title } = this.props.category;
+    const { name } = this.props.category;
     return (
       <div className="category" onClick={this.selectCategory.bind(this)}>
-        <h4>{id}, {title}</h4>
-        <h5 onClick={this.deleteCategory.bind(this)}>DELETE</h5>
+        <h4>{name}</h4>
+        <div className="delete-icon-wrapper" onClick={this.deleteCategory.bind(this)}>
+          <i className="fas fa-trash-alt"></i>
+        </div>
       </div>
     );
   }
