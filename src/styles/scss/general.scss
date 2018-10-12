@@ -19,6 +19,26 @@ body {
   color: $gray;
 }
 
+.delete-form {
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+  button {
+    padding: 16px;
+    min-width: 150px;
+    background: $red;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;

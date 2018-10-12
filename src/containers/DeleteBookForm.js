@@ -16,7 +16,7 @@ class DeleteBookForm extends Component {
   render() {
     return (
       <form
-        className="delete-book-form"
+        className="delete-form"
         onSubmit={this.handleSubmit.bind(this)}
       >
         <p>Please confirm that you want to delete this book.</p>
