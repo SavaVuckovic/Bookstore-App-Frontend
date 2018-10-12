@@ -19,7 +19,7 @@ class Book extends Component {
 
   handleEditClick() {
     this.showModal('edit');
-    this.props.getSingleBook(this.props.id);
+    this.props.getSingleBook(this.props.book.id);
   }
 
   render() {

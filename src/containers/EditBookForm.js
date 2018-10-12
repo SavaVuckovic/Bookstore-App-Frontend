@@ -92,7 +92,7 @@ class EditBookForm extends Component {
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="complete">Progress</label>
+          <label htmlFor="complete">Progress {this.state.complete} %</label>
           <input 
             type="range" 
             name="complete" 
