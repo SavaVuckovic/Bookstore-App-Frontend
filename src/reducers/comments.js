@@ -11,8 +11,7 @@ export default function commentsReducer(state = [], action) {
     case CREATE_COMMENT:
       return [...state, action.payload];
     case REMOVE_COMMENT:
-      // HANDLE REMOVING COMMENT
-      return state;
+      return state.filter(c => c.id !== action.payload);
     default:
       return state;
   }

@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { removeComment } from '../actions';
 import userImg from '../images/defaultuser.png';
 
-export default class Comment extends Component {
+class Comment extends Component {
   render() {
-    const { author, text } = this.props;
+    const { id, author, text } = this.props;
 
     return (
       <div className="comment">
         <div className="author">
           <img src={userImg} alt="user"/>
           <span>{author}</span>
+          <span 
+            className="remove"
+            onClick={() => this.props.removeComment(id)}
+          >Remove</span> 
         </div>
         <p className="body">{text}</p>
         <div className="clearfix"/>
@@ -17,3 +23,5 @@ export default class Comment extends Component {
     );
   }
 } 
+
+export default connect(null, { removeComment })(Comment);

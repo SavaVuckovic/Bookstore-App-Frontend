@@ -27,9 +27,12 @@ export const createComment = comment => dispatch => {
     });
 };
 
-export function removeComment(id) {
-  return {
-    type: REMOVE_COMMENT,
-    payload: id
-  };
-};
+export const removeComment = comment_id => dispatch => {
+  axios.delete(`${ROOT_URL}/comments/${comment_id}`)
+    .then(res => {
+      dispatch({
+        type: REMOVE_COMMENT,
+        payload: comment_id
+      });
+    });
+}

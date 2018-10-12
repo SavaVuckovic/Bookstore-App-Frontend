@@ -257,6 +257,11 @@ body {
         font-size: 16px;
         color: #0097f9;
         font-weight: 600; }
+      .comments-list .comment .author .remove {
+        margin-left: auto;
+        font-weight: 400;
+        font-size: 14px;
+        cursor: pointer; }
     .comments-list .comment .body {
       margin: 10px 0 5px;
       font-size: 15px; }
