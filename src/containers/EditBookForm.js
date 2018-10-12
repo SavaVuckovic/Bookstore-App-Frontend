@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { updateBook } from '../actions';
+import { updateBook, updateActiveBook } from '../actions';
 
 class EditBookForm extends Component {
   constructor(props) {
@@ -44,6 +44,7 @@ class EditBookForm extends Component {
     }
     // update action
     this.props.updateBook(book);
+    this.props.updateActiveBook(book);
     // reset state
     this.setState({
       title: '',
@@ -112,4 +113,4 @@ const mapStateToProps = ({ categories, activeBook }) => {
   return { categories, activeBook };
 }
 
-export default connect(mapStateToProps, { updateBook })(EditBookForm);
+export default connect(mapStateToProps, { updateBook, updateActiveBook })(EditBookForm);

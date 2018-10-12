@@ -15,18 +15,11 @@ class SingleBookPage extends Component {
   }
 
   render() {
-    const { id, title, category_name, author, complete } = this.props.activeBook;
-
+    const { activeBook } = this.props;
     return (
       <Fragment>
-        <Book
-          id={id}
-          title={title} 
-          category={category_name}
-          author={author}
-          complete={complete}
-        />
-        <NewCommentForm bookID={id}/>
+        <Book key={activeBook.id} book={activeBook}/>
+        <NewCommentForm bookID={activeBook.id}/>
         <CommentList/>
       </Fragment>
     );

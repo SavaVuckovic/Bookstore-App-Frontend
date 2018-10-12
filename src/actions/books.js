@@ -5,6 +5,7 @@ import {
   GET_BOOKS_BY_CATEGORY,
   CREATE_BOOK,
   UPDATE_BOOK,
+  UPDATE_ACTIVE_BOOK,
   REMOVE_BOOK
 } from './types';
 
@@ -59,6 +60,13 @@ export const updateBook = book => dispatch => {
       });
     });
 }
+
+export const updateActiveBook = book => {
+  return {
+    type: UPDATE_ACTIVE_BOOK,
+    payload: book
+  };
+};
 
 export const removeBook = book_id => dispatch => {
   axios.delete(`${ROOT_URL}/books/${book_id}`)
