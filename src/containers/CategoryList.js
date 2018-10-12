@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import NewCategoryForm from '../containers/NewCategoryForm';
 import Category from './Category';
 
 class CategoryList extends Component {
@@ -12,6 +13,7 @@ class CategoryList extends Component {
   render() {
     return (
       <div className="categories-list">
+        <NewCategoryForm/>
         {this.renderCategories()}
       </div>
     );

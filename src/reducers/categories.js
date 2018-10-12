@@ -9,11 +9,9 @@ export default function categoriesReducer(state = [], action) {
     case GET_CATEGORIES:
       return action.payload;
     case CREATE_CATEGORY:
-      // HANDLE CREATING CATEGORIES
-      return state;
+      return [...state, action.payload];
     case REMOVE_CATEGORY:
-      // HANDLE REMOVING CATEGORIES
-      return state;
+      return state.filter(c => c.id !== action.payload);
     default:
       return state;
   }

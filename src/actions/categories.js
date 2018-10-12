@@ -18,18 +18,24 @@ export const getCategories = () => dispatch => {
     });
 };
 
-export function createCategory(category) {
-  return {
-    type: CREATE_CATEGORY,
-    payload: category
-  };
-}
+export const createCategory = category => dispatch => {
+  axios.post(`${ROOT_URL}/categories`, category)
+    .then(res => {
+      dispatch({
+        type: CREATE_CATEGORY,
+        payload: res.data
+      });
+    });
+};
 
-export function removeCategory(id) {
-  return {
-    type: REMOVE_CATEGORY,
-    payload: id
-  };
+export const removeCategory = category_id => dispatch => {
+  axios.delete(`${ROOT_URL}/categories/${category_id}`)
+    .then(res => {
+      dispatch({
+        type: REMOVE_CATEGORY,
+        payload: category_id
+      });
+    });
 }
 
 export function setActiveCategory(category) {
