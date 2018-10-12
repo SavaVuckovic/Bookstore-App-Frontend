@@ -8,7 +8,7 @@ import {
 const ROOT_URL = 'http://localhost:5000';
 
 export const getBookComments = book_id => dispatch => {
-  axios.get(`${ROOT_URL}/${book_id}/comments`)
+  axios.get(`${ROOT_URL}/books/${book_id}/comments`)
     .then(res => {
       dispatch({
         type: GET_BOOK_COMMENTS,
