@@ -5,10 +5,9 @@ import { removeCategory } from '../actions';
 class DeleteCategoryForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
-    this.props.removeCategory(this.props.id);
-    if (this.props.callback) {
-      this.props.callback();
-    }
+    const { removeCategory, id, callback } = this.props;
+    removeCategory(id);
+    callback();
   }
 
   render() {

@@ -37,14 +37,12 @@ class EditBookForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const { id, updateBook, updateActiveBook, callback } = this.props;
     // create a new book object
-    const book = {
-      id: this.props.id,
-      ...this.state
-    }
-    // update action
-    this.props.updateBook(book);
-    this.props.updateActiveBook(book);
+    const book = { id, ...this.state };
+    // update actions
+    updateBook(book);
+    updateActiveBook(book);
     // reset state
     this.setState({
       title: '',
@@ -52,10 +50,8 @@ class EditBookForm extends Component {
       category_name: '',
       complete: ''
     });
-    // close modal
-    if (this.props.callback) {
-      this.props.callback();
-    }
+    // execute a callback (close the modal)
+    callback();
   }
 
   render() {

@@ -36,11 +36,11 @@ export const removeCategory = category_id => dispatch => {
         payload: category_id
       });
     });
-}
+};
 
 export function setActiveCategory(category) {
   return {
     type: SET_ACTIVE_CATEGORY,
     payload: category
   };
-}
+};

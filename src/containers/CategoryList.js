@@ -4,9 +4,7 @@ import Category from './Category';
 
 class CategoryList extends Component {
   renderCategories() {
-    return this.props.categories.map(cat => {
-      return <Category key={cat.id} category={cat}/>;
-    });
+    return this.props.categories.map(cat => <Category key={cat.id} category={cat}/>);
   }
 
   render() {

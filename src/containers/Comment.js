@@ -5,7 +5,7 @@ import userImg from '../images/defaultuser.png';
 
 class Comment extends Component {
   render() {
-    const { id, author, text } = this.props;
+    const { id, author, text } = this.props.comment;
 
     return (
       <div className="comment">

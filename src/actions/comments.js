@@ -35,4 +35,4 @@ export const removeComment = comment_id => dispatch => {
         payload: comment_id
       });
     });
-}
+};

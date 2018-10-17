@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Comment from '../components/Comment';
+import Comment from './Comment';
 
 class CommentList extends Component {
   renderComments() {
-    return this.props.comments.map(comment => {
-      const { id, author, text } = comment;
-
-      return <Comment
-        id={id}
-        key={id}
-        author={author}
-        text={text}
-      />;
-    });
+    return this.props.comments.map(comm => <Comment key={comm.id} comment={comm} />);
   }
 
   render() {

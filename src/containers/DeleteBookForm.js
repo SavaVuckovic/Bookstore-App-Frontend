@@ -5,12 +5,9 @@ import { removeBook } from '../actions';
 class DeleteBookForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
-    // remove action 
-    this.props.removeBook(this.props.id);
-     // close modal
-    if (this.props.callback) {
-      this.props.callback();
-    }
+    const { removeBook, id, callback } = this.props;
+    removeBook(id);
+    callback();
   }
 
   render() {

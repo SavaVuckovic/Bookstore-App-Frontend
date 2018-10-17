@@ -29,7 +29,7 @@ export const getSingleBook = book_id => dispatch => {
         payload: res.data
       });
     });
-}
+};
 
 export const getBooksByCategory = category_id => dispatch => {
   axios.get(`${ROOT_URL}/categories/${category_id}/books`)
@@ -39,7 +39,7 @@ export const getBooksByCategory = category_id => dispatch => {
         payload: res.data
       });
     });
-}
+};
 
 export const createBook = book => dispatch => {
   axios.post(`${ROOT_URL}/books`, book)
@@ -59,7 +59,7 @@ export const updateBook = book => dispatch => {
         payload: res.data
       });
     });
-}
+};
 
 export const updateActiveBook = book => {
   return {
@@ -76,4 +76,4 @@ export const removeBook = book_id => dispatch => {
         payload: book_id
       });
     });
-}
+};

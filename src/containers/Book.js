@@ -2,29 +2,32 @@ import React, { Component, Fragment } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getSingleBook } from '../actions';
-import Modal from './Modal';
-import EditBookForm from '../containers/EditBookForm';
-import DeleteBookForm from '../containers/DeleteBookForm';
+import Modal from '../components/Modal';
+import EditBookForm from './EditBookForm';
+import DeleteBookForm from './DeleteBookForm';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 class Book extends Component {
-  showModal(name) {
-    this.refs[name].modalTarget.style.display = 'block';
-  }
-
-  closeModal(name) {
-    this.refs[name].modalTarget.style.display = 'none'
+  toggleModal(name) {
+    // show/hide edit or delete modal
+    const modal = this.refs[name].modalTarget;
+    if (modal.style.display !== 'block') {
+      modal.style.display = 'block';
+    } else { 
+      modal.style.display = 'none';
+    }
   }
 
   handleEditClick() {
-    this.showModal('edit');
+    // open edit modal and get book data
+    this.toggleModal('edit');
     this.props.getSingleBook(this.props.book.id);
   }
 
   deleteBookCallback() {
-    this.closeModal('delete');
-    console.log('CALLED');
+    // close delete modal and redirect to /
+    this.toggleModal('delete');
     this.props.history.push('/');
   }
 
@@ -37,14 +40,16 @@ class Book extends Component {
           <div className="left">
             <div className="info">
               <h4 className="category">{category_name}</h4>
-              <h3 className="title">{title}</h3>
+              <Link className="title-link" to={`/books/${id}`}>
+                <h3 className="title">{title}</h3>
+              </Link>
               <span className="author">{author}</span>
             </div>
             <div className="controls">
               <Link className="comments-link" to={`/books/${id}`}>
                 <span className="ctrlbtn">Comments</span>
               </Link>
-              <span className="ctrlbtn" onClick={() => this.showModal('delete')}>Remove</span>
+              <span className="ctrlbtn" onClick={() => this.toggleModal('delete')}>Remove</span>
               <span className="ctrlbtn" onClick={this.handleEditClick.bind(this)}>Edit</span>
             </div>
           </div>
@@ -62,7 +67,7 @@ class Book extends Component {
         </div>
 
         <Modal ref="edit" header="Edit Book">
-          <EditBookForm id={id} callback={() => this.closeModal('edit')}/>
+          <EditBookForm id={id} callback={() => this.toggleModal('edit')}/>
         </Modal>
 
         <Modal ref="delete" header="Delete Book">

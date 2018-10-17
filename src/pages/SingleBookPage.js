@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { getSingleBook, getBookComments, getCategories } from '../actions';
-import Book from '../components/Book';
+import Book from '../containers/Book';
 import CommentList from '../containers/CommentList';
 import NewCommentForm from '../containers/NewCommentForm';
 
@@ -9,7 +9,7 @@ class SingleBookPage extends Component {
   componentDidMount() {
     const { getSingleBook, getBookComments, getCategories } = this.props;
     const id = this.props.match.params.id;
-    // get the book to show by id passed in params
+    // get the book by ID passed in params
     getSingleBook(id);
     getBookComments(id);
     getCategories();
