@@ -1,0 +1,85 @@
+// general form styling
+form {
+  display: flex;
+  input {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid $lightgray;
+    font-size: 16px;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  textarea {
+    border-radius: 4px;
+    border: 1px solid $lightgray;
+    font-size: 14px;
+    padding: 12px;
+    min-height: 58px;
+    max-height: 158px;
+  }
+  select {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid $lightgray;
+    background: $white;
+  }
+}
+
+.delete-form {
+  p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .btn {
+    background: $red;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.new-comment-form {
+  margin-bottom: 24px;
+  input {
+    flex: 1;
+    margin-right: 16px;
+  }
+  textarea {
+    flex: 3;
+    margin-right: 16px;
+  }
+}
+
+.new-book-form {
+  margin-bottom: 128px;
+  input {
+    flex: 2;
+    margin-right: 16px;
+  }
+  select {
+    flex: 1;
+    margin-right: 16px;
+  }
+}
+
+.edit-book-form {
+  .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    label {
+      width: 120px;
+      font-size: 16px;
+    }
+    input, 
+    select {
+      flex: 1;
+    }
+  }
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

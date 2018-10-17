@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,iBAAkB;EAChB,MAAM,EAAE,aAAa;EACrB,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;EACb,uBAAM;IACJ,IAAI,EAAE,CAAC;IACP,YAAY,EAAE,IAAI;IAClB,OAAO,EAAE,IAAI;IACb,aAAa,EAAE,GAAG;EAEpB,0BAAS;IACP,IAAI,EAAE,CAAC;IACP,YAAY,EAAE,IAAI",
-"sources": ["../scss/commentform.scss"],
-"names": [],
-"file": "commentform.css"
-}

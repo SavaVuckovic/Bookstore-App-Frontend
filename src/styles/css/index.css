@@ -15,21 +15,15 @@ body {
   text-transform: uppercase;
   color: #888888; }
 
-.delete-form p {
-  font-size: 18px;
-  text-align: center; }
-.delete-form button {
-  padding: 16px;
-  min-width: 150px;
-  background: #f9004b;
+.btn {
+  background: #0097f9;
+  width: 150px;
   color: #fff;
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 15px;
-  display: block;
-  margin: 0 auto; }
+  padding: 16px; }
 
 .container {
   padding-right: 15px;
@@ -179,64 +173,6 @@ body {
     .book .right .percent span {
       color: #888888; }
 
-.new-book-form {
-  margin-bottom: 128px;
-  display: flex; }
-  .new-book-form input {
-    padding: 12px;
-    border-radius: 4px;
-    border: 1px solid #e8e8e8;
-    margin-right: 16px;
-    font-size: 16px;
-    flex: 2; }
-    .new-book-form input::placeholder {
-      color: #888888; }
-  .new-book-form select {
-    padding: 16px;
-    flex: 1;
-    margin-right: 16px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #e8e8e8;
-    background: #fff; }
-  .new-book-form button {
-    padding: 16px;
-    width: 150px;
-    background: #0097f9;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 600; }
-
-.edit-book-form .form-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px; }
-  .edit-book-form .form-group label {
-    width: 120px;
-    font-size: 16px; }
-  .edit-book-form .form-group input,
-  .edit-book-form .form-group select {
-    flex: 1;
-    padding: 16px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #e8e8e8;
-    background: #fff; }
-.edit-book-form button {
-  padding: 16px;
-  width: 150px;
-  background: #0097f9;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: block;
-  margin: 0 auto; }
-
 .comments-list {
   padding-bottom: 36px; }
   .comments-list .comment {
@@ -266,37 +202,6 @@ body {
     .comments-list .comment .body {
       margin: 10px 0 5px;
       font-size: 15px; }
-
-.new-comment-form {
-  margin-bottom: 24px;
-  display: flex; }
-  .new-comment-form input {
-    flex: 1;
-    margin-right: 16px;
-    padding: 12px;
-    border-radius: 4px;
-    border: 1px solid #e8e8e8;
-    font-size: 16px; }
-    .new-comment-form input::placeholder {
-      color: #888888; }
-  .new-comment-form textarea {
-    flex: 3;
-    margin-right: 16px;
-    border-radius: 4px;
-    border: 1px solid #e8e8e8;
-    font-size: 14px;
-    padding: 12px;
-    min-height: 58px;
-    max-height: 158px; }
-  .new-comment-form button {
-    padding: 16px;
-    width: 150px;
-    background: #0097f9;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 600; }
 
 .categories-list {
   display: flex;
@@ -347,5 +252,69 @@ body {
     flex: 1;
     text-transform: uppercase;
     padding: 16px; }
+
+form {
+  display: flex; }
+  form input {
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    font-size: 16px; }
+    form input::placeholder {
+      color: #888888; }
+  form textarea {
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    padding: 12px;
+    min-height: 58px;
+    max-height: 158px; }
+  form select {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    background: #fff; }
+
+.delete-form p {
+  font-size: 18px;
+  text-align: center; }
+.delete-form .btn {
+  background: #f9004b;
+  display: block;
+  margin: 0 auto; }
+
+.new-comment-form {
+  margin-bottom: 24px; }
+  .new-comment-form input {
+    flex: 1;
+    margin-right: 16px; }
+  .new-comment-form textarea {
+    flex: 3;
+    margin-right: 16px; }
+
+.new-book-form {
+  margin-bottom: 128px; }
+  .new-book-form input {
+    flex: 2;
+    margin-right: 16px; }
+  .new-book-form select {
+    flex: 1;
+    margin-right: 16px; }
+
+.edit-book-form .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px; }
+  .edit-book-form .form-group label {
+    width: 120px;
+    font-size: 16px; }
+  .edit-book-form .form-group input,
+  .edit-book-form .form-group select {
+    flex: 1; }
+.edit-book-form .btn {
+  display: block;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=index.css.map */

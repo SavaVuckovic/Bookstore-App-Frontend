@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$lightgray".
-        on line 7 of src/styles/scss/bookforms.scss
+        on line 7 of src/styles/scss/forms.scss
 
-2:   margin-bottom: 128px;
+2: form {
 3:   display: flex;
 4:   input {
 5:     padding: 12px;
 6:     border-radius: 4px;
 7:     border: 1px solid $lightgray;
-8:     margin-right: 16px;
-9:     font-size: 16px;
-10:     flex: 2;
-11:     &::placeholder {
-12:       color: $gray;
+8:     font-size: 16px;
+9:     &::placeholder {
+10:       color: $gray;
+11:     }
+12:   }
 
 Backtrace:
-src/styles/scss/bookforms.scss:7
+src/styles/scss/forms.scss:7
 /home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/variable.rb:49:in `_perform'
 /home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/node.rb:50:in `perform'
 /home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -84,4 +84,4 @@ src/styles/scss/bookforms.scss:7
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightgray\".\A         on line 7 of src/styles/scss/bookforms.scss\A \A 2:   margin-bottom: 128px;\A 3:   display: flex;\A 4:   input {\A 5:     padding: 12px;\A 6:     border-radius: 4px;\A 7:     border: 1px solid $lightgray;\A 8:     margin-right: 16px;\A 9:     font-size: 16px;\A 10:     flex: 2;\A 11:     &::placeholder {\A 12:       color: $gray;"; }
+  content: "Error: Undefined variable: \"$lightgray\".\A         on line 7 of src/styles/scss/forms.scss\A \A 2: form {\A 3:   display: flex;\A 4:   input {\A 5:     padding: 12px;\A 6:     border-radius: 4px;\A 7:     border: 1px solid $lightgray;\A 8:     font-size: 16px;\A 9:     &::placeholder {\A 10:       color: $gray;\A 11:     }\A 12:   }"; }
