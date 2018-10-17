@@ -49,6 +49,9 @@
         &:last-child {
           border: none;
         }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

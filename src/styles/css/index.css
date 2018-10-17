@@ -10,11 +10,6 @@ body {
 .clearfix {
   clear: both; }
 
-.form-title {
-  margin-top: 32px;
-  text-transform: uppercase;
-  color: #888888; }
-
 .btn {
   background: #0097f9;
   width: 150px;
@@ -158,6 +153,8 @@ body {
           padding-left: 0; }
         .book .left .controls .ctrlbtn:last-child {
           border: none; }
+        .book .left .controls .ctrlbtn:hover {
+          text-decoration: underline; }
   .book .right {
     flex: 1;
     display: flex;
@@ -253,6 +250,11 @@ body {
     text-transform: uppercase;
     padding: 16px; }
 
+.form-title {
+  margin-top: 32px;
+  text-transform: uppercase;
+  color: #888888; }
+
 form {
   display: flex; }
   form input {
@@ -276,13 +278,15 @@ form {
     border: 1px solid #e8e8e8;
     background: #fff; }
 
-.delete-form p {
-  font-size: 18px;
-  text-align: center; }
-.delete-form .btn {
-  background: #f9004b;
-  display: block;
-  margin: 0 auto; }
+.delete-form {
+  flex-direction: column; }
+  .delete-form p {
+    font-size: 18px;
+    text-align: center; }
+  .delete-form .btn {
+    background: #f9004b;
+    display: block;
+    margin: 0 auto; }
 
 .new-comment-form {
   margin-bottom: 24px; }
@@ -302,19 +306,22 @@ form {
     flex: 1;
     margin-right: 16px; }
 
-.edit-book-form .form-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px; }
-  .edit-book-form .form-group label {
-    width: 120px;
-    font-size: 16px; }
-  .edit-book-form .form-group input,
-  .edit-book-form .form-group select {
-    flex: 1; }
-.edit-book-form .btn {
-  display: block;
-  margin: 0 auto; }
+.edit-book-form {
+  flex-direction: column; }
+  .edit-book-form .form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px; }
+    .edit-book-form .form-group label {
+      width: 120px;
+      font-size: 16px; }
+    .edit-book-form .form-group input,
+    .edit-book-form .form-group select {
+      flex: 1; }
+  .edit-book-form .btn {
+    display: block;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=index.css.map */

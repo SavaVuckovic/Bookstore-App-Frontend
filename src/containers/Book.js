@@ -40,9 +40,7 @@ class Book extends Component {
           <div className="left">
             <div className="info">
               <h4 className="category">{category_name}</h4>
-              <Link className="title-link" to={`/books/${id}`}>
-                <h3 className="title">{title}</h3>
-              </Link>
+              <h3 className="title">{title}</h3>
               <span className="author">{author}</span>
             </div>
             <div className="controls">

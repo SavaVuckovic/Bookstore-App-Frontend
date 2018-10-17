@@ -1,4 +1,10 @@
 // general form styling
+.form-title {
+  margin-top: 32px;
+  text-transform: uppercase;
+  color: $gray;
+}
+
 form {
   display: flex;
   input {
@@ -27,7 +33,9 @@ form {
   }
 }
 
+// specific form styling
 .delete-form {
+  flex-direction: column;
   p {
     font-size: 18px;
     text-align: center;
@@ -64,7 +72,9 @@ form {
 }
 
 .edit-book-form {
+  flex-direction: column;
   .form-group {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

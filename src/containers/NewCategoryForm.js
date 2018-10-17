@@ -27,7 +27,7 @@ class NewCategoryForm extends Component {
           value={this.state.name}
           onChange={e => this.setState({ name: e.target.value })}
         />
-        <button type="submit">Create</button>
+        <button type="submit" className="btn">Create</button>
       </form>
     );
   }

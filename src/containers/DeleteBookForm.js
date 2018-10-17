@@ -17,7 +17,7 @@ class DeleteBookForm extends Component {
         onSubmit={this.handleSubmit.bind(this)}
       >
         <p>Please confirm that you want to delete this book.</p>
-        <button type="submit">Delete Book</button>
+        <button type="submit" className="btn">Delete Book</button>
       </form>
     );
   }

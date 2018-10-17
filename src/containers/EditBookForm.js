@@ -99,7 +99,7 @@ class EditBookForm extends Component {
             onChange={this.handleChange.bind(this)}
           />
         </div>
-        <button type="submit">Update Book</button>
+        <button type="submit" className="btn">Update Book</button>
       </form>
     );
   }

@@ -68,7 +68,7 @@ class NewBookForm extends Component {
           >
             {this.renderSelectOptions()}
           </select>
-          <button type="submit">Add Book</button>
+          <button type="submit" className="btn">Add Book</button>
         </form>
       </Fragment>
     );

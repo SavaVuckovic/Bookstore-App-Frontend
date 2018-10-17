@@ -47,7 +47,7 @@ class NewCommentForm extends Component {
             value={this.state.text}
             onChange={this.handleChange.bind(this)}
           ></textarea>
-          <button type="submit">Add Comment</button>
+          <button type="submit" className="btn">Add Comment</button>
         </form>
       </Fragment>
     );

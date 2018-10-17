@@ -18,7 +18,7 @@ class DeleteCategoryForm extends Component {
       >
         <p>Please confirm that you want to delete this category.</p>
         <p>All books that belong to this category will also get deleted.</p>
-        <button type="submit">Delete Category</button>
+        <button type="submit" className="btn">Delete Category</button>
       </form>
     );
   }
