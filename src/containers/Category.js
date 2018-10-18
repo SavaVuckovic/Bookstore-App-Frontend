@@ -16,9 +16,10 @@ class Category extends Component {
 
   render() {
     const { id, name } = this.props.category;
+    
     return (
       <Fragment>
-        <div className="category">
+        <div className={"category " + (this.props.activeCategory.id === id ? "active" : "")}>
           <h4 onClick={() => this.props.setActiveCategory(this.props.category)}>{name}</h4>
           <div className="delete-icon-wrapper" onClick={this.toggleModal.bind(this)}>
             <i className="fas fa-trash-alt"></i>
@@ -33,4 +34,7 @@ class Category extends Component {
   }
 }
 
-export default connect(null, { setActiveCategory })(Category);
+const mapStateToProps = ({ activeCategory }) => {
+  return { activeCategory };
+};
+export default connect(mapStateToProps, { setActiveCategory })(Category);

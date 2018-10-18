@@ -11,9 +11,14 @@
     margin-bottom: 12px;
     display: flex;
     padding-left: 12px;
+    &.active {
+      background: $blue;
+      color: $white;
+    }
     h4 {
       flex: 1;
       font-weight: 600;
+      cursor: pointer;
     }
     .delete-icon-wrapper {
       width: 48px;

@@ -8,7 +8,7 @@ class NewBookForm extends Component {
     this.state = {
       title: '',
       author: '',
-      category: ''
+      category: 'Action'
     };
   }
 

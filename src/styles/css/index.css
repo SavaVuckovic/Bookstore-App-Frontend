@@ -303,9 +303,13 @@ body {
     margin-bottom: 12px;
     display: flex;
     padding-left: 12px; }
+    .categories-list .category.active {
+      background: #0097f9;
+      color: #fff; }
     .categories-list .category h4 {
       flex: 1;
-      font-weight: 600; }
+      font-weight: 600;
+      cursor: pointer; }
     .categories-list .category .delete-icon-wrapper {
       width: 48px;
       display: flex;

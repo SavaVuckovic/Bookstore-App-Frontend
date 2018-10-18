@@ -12,10 +12,10 @@ export default function booksReducer(state = [], action) {
     case GET_BOOKS_BY_CATEGORY:
       return action.payload;
     case CREATE_BOOK:
-      return [...state, action.payload];
+      return [action.payload, ...state];
     case UPDATE_BOOK:
       const newState = state.filter(b => b.id !== action.payload.id);
-      return [...newState, action.payload];
+      return [action.payload, ...newState];
     case REMOVE_BOOK:
       return state.filter(b => b.id !== action.payload);
     default:
