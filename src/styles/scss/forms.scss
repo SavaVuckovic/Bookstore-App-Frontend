@@ -93,3 +93,11 @@ form {
     margin: 0 auto;
   }
 }
+
+.new-category-form {
+  margin-bottom: 24px;
+  input {
+    flex: 3;
+    margin-right: 16px;
+  }
+}
