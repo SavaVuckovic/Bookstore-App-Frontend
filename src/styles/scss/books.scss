@@ -1,6 +1,10 @@
 .books-list {
   border-bottom: 2px solid $lightgray; 
   padding-bottom: 16px;
+  @media only screen and (max-width: $xs) {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $lightgray;
+  } 
 }
 
 .book {
@@ -11,6 +15,7 @@
   padding: 24px;
   display: flex;
   margin-bottom: 16px;
+  width: 100%;
   .left {
     flex: 3;
     .info {
@@ -72,6 +77,58 @@
       }
       span {
         color: $gray;
+      }
+    }
+  }
+  @media only screen and (max-width: $xs) {
+    border: 1px solid $lightgray;
+    height: 130px;
+    padding: 12px;
+    margin-bottom: 10px;
+    .left {
+      flex: 2;
+      .info {
+        .category {
+          font-size: 14px;
+        }
+        .title {
+          font-size: 16px;
+        }
+        .author {
+          font-size: 14px;
+        }
+      }
+      .controls {
+        height: 36px;
+        .comments-link {
+          border-right: 1px solid $lightgray;
+        }
+        .ctrlbtn {
+          cursor: pointer;
+          font-size: 13px;
+          padding: 0 8px;
+        }
+      }
+    }
+    .right {
+      flex: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      .spinner {
+        height: 42px;
+        width: 42px;
+        margin-right: 0;
+      }
+      .percent {
+        h1 {
+          font-size: 16px;
+          text-align: center;
+        }
+        span {
+          font-size: 12px;
+        }
       }
     }
   }

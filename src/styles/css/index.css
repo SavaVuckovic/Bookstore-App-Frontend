@@ -21,8 +21,8 @@ body {
   padding: 16px; }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 8px;
+  padding-left: 8px;
   margin-right: auto;
   margin-left: auto; }
   @media only screen and (min-width: 768px) {
@@ -114,6 +114,10 @@ body {
 .books-list {
   border-bottom: 2px solid #e8e8e8;
   padding-bottom: 16px; }
+  @media only screen and (max-width: 768px) {
+    .books-list {
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8e8e8; } }
 
 .book {
   border: 1.5px solid #e8e8e8;
@@ -122,7 +126,8 @@ body {
   height: 170px;
   padding: 24px;
   display: flex;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  width: 100%; }
   .book .left {
     flex: 3; }
     .book .left .info .category {
@@ -169,6 +174,43 @@ body {
       font-weight: 600; }
     .book .right .percent span {
       color: #888888; }
+  @media only screen and (max-width: 768px) {
+    .book {
+      border: 1px solid #e8e8e8;
+      height: 130px;
+      padding: 12px;
+      margin-bottom: 10px; }
+      .book .left {
+        flex: 2; }
+        .book .left .info .category {
+          font-size: 14px; }
+        .book .left .info .title {
+          font-size: 16px; }
+        .book .left .info .author {
+          font-size: 14px; }
+        .book .left .controls {
+          height: 36px; }
+          .book .left .controls .comments-link {
+            border-right: 1px solid #e8e8e8; }
+          .book .left .controls .ctrlbtn {
+            cursor: pointer;
+            font-size: 13px;
+            padding: 0 8px; }
+      .book .right {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; }
+        .book .right .spinner {
+          height: 42px;
+          width: 42px;
+          margin-right: 0; }
+        .book .right .percent h1 {
+          font-size: 16px;
+          text-align: center; }
+        .book .right .percent span {
+          font-size: 12px; } }
 
 .comments-list {
   padding-bottom: 36px; }
