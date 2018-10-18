@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
@@ -41,7 +41,7 @@ class NewBookForm extends Component {
   
   render() {
     return (
-      <Fragment>
+      <div className="container">
         <h3 className="form-title">Add new book</h3>
         <form
           className="new-book-form"
@@ -70,7 +70,7 @@ class NewBookForm extends Component {
           </select>
           <button type="submit" className="btn">Add Book</button>
         </form>
-      </Fragment>
+      </div>
     );
   }
 }

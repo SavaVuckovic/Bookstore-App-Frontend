@@ -3,6 +3,10 @@
   margin-top: 32px;
   text-transform: uppercase;
   color: $gray;
+  @media only screen and (max-width: $xs) {
+    font-size: 15px;
+    margin: 16px 0 12px 8px;
+  }
 }
 
 form {
@@ -31,6 +35,28 @@ form {
     border: 1px solid $lightgray;
     background: $white;
   }
+  @media only screen and (max-width: $xs) {
+    flex-direction: column;
+    input {
+      padding: 8px;
+      font-size: 14px;
+      margin: 0 0 8px;
+    }
+    textarea {
+      font-size: 12px;
+      margin: 0 0 8px;
+      padding: 8px;
+    }
+    select {
+      padding: 8px;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .btn {
+      padding: 8px;
+      width: 100%;
+    }
+  } 
 }
 
 // specific form styling
@@ -45,6 +71,11 @@ form {
     display: block;
     margin: 0 auto;
   }
+  @media only screen and (max-width: $xs) {
+    p {
+      font-size: 14px;
+    }
+  }
 }
 
 .new-comment-form {
@@ -57,6 +88,14 @@ form {
     flex: 3;
     margin-right: 16px;
   }
+  @media only screen and (max-width: $xs) {
+    input {
+      margin-right: 0;
+    }
+    textarea {
+      margin-right: 0;
+    }
+  }
 }
 
 .new-book-form {
@@ -68,6 +107,14 @@ form {
   select {
     flex: 1;
     margin-right: 16px;
+  }
+  @media only screen and (max-width: $xs) {
+    input {
+      margin-right: 0;
+    }
+    select {
+      margin-right: 0;
+    }
   }
 }
 
@@ -92,6 +139,21 @@ form {
     display: block;
     margin: 0 auto;
   }
+  @media only screen and (max-width: $xs) {
+    flex-direction: column;
+    .form-group {
+      margin-bottom: 8px;
+      label {
+        width: 80px;
+        font-size: 12px;
+        flex: 2;
+      }
+      input,
+      select {
+        flex: 5;
+      }
+    }
+  }
 }
 
 .new-category-form {
@@ -99,5 +161,11 @@ form {
   input {
     flex: 3;
     margin-right: 16px;
+  }
+  @media only screen and (max-width: $xs) {
+    margin-bottom: 16px;
+    input {
+      margin-right: 0;
+    }
   }
 }

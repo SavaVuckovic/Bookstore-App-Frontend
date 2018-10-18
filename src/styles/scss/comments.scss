@@ -33,5 +33,31 @@
       font-size: 15px;
     }
   }
+  @media only screen and (max-width: $xs) {
+    padding-bottom: 24px;
+    .comment {
+      border: 1px solid $lightgray;
+      background: $white;
+      border-radius: 4px;
+      padding: 10px 16px;
+      margin-bottom: 12px;
+      .author {
+        img {
+          margin-right: 12px;
+          border: 1px solid $lightgray;
+        }
+        span {
+          font-size: 14px;
+        }
+        .remove {
+          font-size: 13px;
+        }
+      }
+      .body {
+        margin: 10px 0 0;
+        font-size: 14px;
+      }
+    }
+  }
 }
 

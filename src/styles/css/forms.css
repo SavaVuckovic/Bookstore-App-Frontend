@@ -7,11 +7,11 @@ Error: Undefined variable: "$gray".
 3:   margin-top: 32px;
 4:   text-transform: uppercase;
 5:   color: $gray;
-6: }
-7: 
-8: form {
-9:   display: flex;
-10:   input {
+6:   @media only screen and (max-width: $xs) {
+7:     font-size: 15px;
+8:     margin: 16px 0 12px 8px;
+9:   }
+10: }
 
 Backtrace:
 src/styles/scss/forms.scss:5
@@ -68,4 +68,4 @@ src/styles/scss/forms.scss:5
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$gray\".\A         on line 5 of src/styles/scss/forms.scss\A \A 1: // general form styling\A 2: .form-title {\A 3:   margin-top: 32px;\A 4:   text-transform: uppercase;\A 5:   color: $gray;\A 6: }\A 7: \A 8: form {\A 9:   display: flex;\A 10:   input {"; }
+  content: "Error: Undefined variable: \"$gray\".\A         on line 5 of src/styles/scss/forms.scss\A \A 1: // general form styling\A 2: .form-title {\A 3:   margin-top: 32px;\A 4:   text-transform: uppercase;\A 5:   color: $gray;\A 6:   @media only screen and (max-width: $xs) {\A 7:     font-size: 15px;\A 8:     margin: 16px 0 12px 8px;\A 9:   }\A 10: }"; }

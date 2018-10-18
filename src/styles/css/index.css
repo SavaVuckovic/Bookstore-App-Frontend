@@ -75,6 +75,20 @@ body {
     opacity: 0; }
   to {
     opacity: 1; } }
+  @media only screen and (max-width: 768px) {
+    .modal .modal-content {
+      margin: 12px auto;
+      width: 90%; }
+      .modal .modal-content .modal-header {
+        padding: 8px; }
+        .modal .modal-content .modal-header h2 {
+          font-size: 15px;
+          margin: 0; }
+        .modal .modal-content .modal-header .modal-close {
+          font-size: 32px; }
+      .modal .modal-content .modal-body {
+        padding: 10px; } }
+
 .navbar {
   background: #fff;
   height: 95px;
@@ -256,6 +270,25 @@ body {
     .comments-list .comment .body {
       margin: 10px 0 5px;
       font-size: 15px; }
+  @media only screen and (max-width: 768px) {
+    .comments-list {
+      padding-bottom: 24px; }
+      .comments-list .comment {
+        border: 1px solid #e8e8e8;
+        background: #fff;
+        border-radius: 4px;
+        padding: 10px 16px;
+        margin-bottom: 12px; }
+        .comments-list .comment .author img {
+          margin-right: 12px;
+          border: 1px solid #e8e8e8; }
+        .comments-list .comment .author span {
+          font-size: 14px; }
+        .comments-list .comment .author .remove {
+          font-size: 13px; }
+        .comments-list .comment .body {
+          margin: 10px 0 0;
+          font-size: 14px; } }
 
 .categories-list {
   display: flex;
@@ -301,6 +334,10 @@ body {
   margin-top: 32px;
   text-transform: uppercase;
   color: #888888; }
+  @media only screen and (max-width: 768px) {
+    .form-title {
+      font-size: 15px;
+      margin: 16px 0 12px 8px; } }
 
 form {
   display: flex; }
@@ -324,6 +361,24 @@ form {
     border-radius: 4px;
     border: 1px solid #e8e8e8;
     background: #fff; }
+  @media only screen and (max-width: 768px) {
+    form {
+      flex-direction: column; }
+      form input {
+        padding: 8px;
+        font-size: 14px;
+        margin: 0 0 8px; }
+      form textarea {
+        font-size: 12px;
+        margin: 0 0 8px;
+        padding: 8px; }
+      form select {
+        padding: 8px;
+        font-size: 14px;
+        margin-bottom: 12px; }
+      form .btn {
+        padding: 8px;
+        width: 100%; } }
 
 .delete-form {
   flex-direction: column; }
@@ -334,6 +389,9 @@ form {
     background: #f9004b;
     display: block;
     margin: 0 auto; }
+  @media only screen and (max-width: 768px) {
+    .delete-form p {
+      font-size: 14px; } }
 
 .new-comment-form {
   margin-bottom: 24px; }
@@ -343,6 +401,11 @@ form {
   .new-comment-form textarea {
     flex: 3;
     margin-right: 16px; }
+  @media only screen and (max-width: 768px) {
+    .new-comment-form input {
+      margin-right: 0; }
+    .new-comment-form textarea {
+      margin-right: 0; } }
 
 .new-book-form {
   margin-bottom: 128px; }
@@ -352,6 +415,11 @@ form {
   .new-book-form select {
     flex: 1;
     margin-right: 16px; }
+  @media only screen and (max-width: 768px) {
+    .new-book-form input {
+      margin-right: 0; }
+    .new-book-form select {
+      margin-right: 0; } }
 
 .edit-book-form {
   flex-direction: column; }
@@ -370,11 +438,28 @@ form {
   .edit-book-form .btn {
     display: block;
     margin: 0 auto; }
+  @media only screen and (max-width: 768px) {
+    .edit-book-form {
+      flex-direction: column; }
+      .edit-book-form .form-group {
+        margin-bottom: 8px; }
+        .edit-book-form .form-group label {
+          width: 80px;
+          font-size: 12px;
+          flex: 2; }
+        .edit-book-form .form-group input,
+        .edit-book-form .form-group select {
+          flex: 5; } }
 
 .new-category-form {
   margin-bottom: 24px; }
   .new-category-form input {
     flex: 3;
     margin-right: 16px; }
+  @media only screen and (max-width: 768px) {
+    .new-category-form {
+      margin-bottom: 16px; }
+      .new-category-form input {
+        margin-right: 0; } }
 
 /*# sourceMappingURL=index.css.map */

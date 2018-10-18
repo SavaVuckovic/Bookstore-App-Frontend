@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createComment } from '../actions';
 
@@ -28,7 +28,7 @@ class NewCommentForm extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="container">
         <h3 className="form-title">Add new comment</h3>
         <form
           className="new-comment-form"
@@ -49,7 +49,7 @@ class NewCommentForm extends Component {
           ></textarea>
           <button type="submit" className="btn">Add Comment</button>
         </form>
-      </Fragment>
+      </div>
     );
   }
 }
