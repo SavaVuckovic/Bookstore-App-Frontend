@@ -5,7 +5,10 @@ import {
   REMOVE_COMMENT 
 } from './types';
 
-const ROOT_URL = 'http://localhost:5000';
+// DEVELOPMENT
+// const ROOT_URL = 'http://localhost:5000';
+// PRODUCTION
+const ROOT_URL = 'https://radiant-lowlands-83044.herokuapp.com';
 
 export const getBookComments = book_id => dispatch => {
   axios.get(`${ROOT_URL}/books/${book_id}/comments`)

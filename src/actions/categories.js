@@ -6,7 +6,10 @@ import {
   SET_ACTIVE_CATEGORY
 } from './types';
 
-const ROOT_URL = 'http://localhost:5000';
+// DEVELOPMENT
+// const ROOT_URL = 'http://localhost:5000';
+// PRODUCTION
+const ROOT_URL = 'https://radiant-lowlands-83044.herokuapp.com';
 
 export const getCategories = () => dispatch => {
   axios.get(`${ROOT_URL}/categories`)
