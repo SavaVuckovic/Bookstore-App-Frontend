@@ -1,0 +1,64 @@
+.navbar {
+  background: $white;
+  height: 95px;
+  border-bottom: 2px solid $lightgray;
+  margin-bottom: 36px;
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .links {
+      display: flex;
+      align-items: center;
+      .logo {
+        font-size: 30px;
+        font-weight: 800;
+        color: $blue;
+        margin-right: 16px;
+        text-transform: none;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .nav-link {
+        text-transform: uppercase;
+        margin: 16px;
+        font-size: 16px;
+        color: $gray;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .logged-user {
+      width: 45px;
+      height: 45px;
+      margin-left: auto;
+      border: 1px solid $lightgray;
+      border-radius: 50%;
+    }
+  }
+  @media only screen and (max-width: $xs) {
+    height: 65px;
+    border-bottom: 1.5px solid $lightgray;
+    margin-bottom: 16px;
+    .container {
+      padding: 0 10px;
+      .links {
+        .logo {
+          font-size: 18px;
+        }
+        .nav-link {
+          margin: 8px;
+          font-size: 12px;
+        }
+      }
+      .logged-user {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  } 
+}

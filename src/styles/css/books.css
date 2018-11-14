@@ -1,0 +1,72 @@
+/*
+Error: Undefined variable: "$lightgray".
+        on line 2 of src/styles/scss/books.scss
+
+1: .books-list {
+2:   border-bottom: 2px solid $lightgray; 
+3:   padding-bottom: 16px;
+4:   @media only screen and (max-width: $xs) {
+5:     padding-bottom: 8px;
+6:     border-bottom: 1px solid $lightgray;
+7:   } 
+
+Backtrace:
+src/styles/scss/books.scss:2
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/variable.rb:49:in `_perform'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/node.rb:50:in `perform'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/list_literal.rb:75:in `map'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/list_literal.rb:75:in `_perform'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/script/tree/node.rb:50:in `perform'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/stack.rb:79:in `block in with_base'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/stack.rb:79:in `with_base'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `map'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/stack.rb:79:in `block in with_base'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/stack.rb:135:in `with_frame'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/stack.rb:79:in `with_base'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `each'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-3.6.0/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/home/sava/.rvm/gems/ruby-2.5.1/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$lightgray\".\A         on line 2 of src/styles/scss/books.scss\A \A 1: .books-list {\A 2:   border-bottom: 2px solid $lightgray; \A 3:   padding-bottom: 16px;\A 4:   @media only screen and (max-width: $xs) {\A 5:     padding-bottom: 8px;\A 6:     border-bottom: 1px solid $lightgray;\A 7:   } "; }

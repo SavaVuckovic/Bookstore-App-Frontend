@@ -1,0 +1,135 @@
+.books-list {
+  border-bottom: 2px solid $lightgray; 
+  padding-bottom: 16px;
+  @media only screen and (max-width: $xs) {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $lightgray;
+  } 
+}
+
+.book {
+  border: 1.5px solid $lightgray;
+  background: $white;
+  border-radius: 4px;
+  height: 170px;
+  padding: 24px;
+  display: flex;
+  margin-bottom: 16px;
+  width: 100%;
+  .left {
+    flex: 3;
+    .info {
+      .category {
+        color: $gray;
+        margin: 0;
+        font-weight: 600;
+      }
+      .title {
+        margin: 9px 0 3px;
+        font-weight: 700;
+      }
+      .author {
+        font-size: 15px;
+        color: $blue;
+      }
+    }
+    .controls {
+      height: 36px;
+      display: flex;
+      align-items: flex-end;
+      .comments-link {
+        display: block;
+        border-right: 2px solid $lightgray;
+        text-decoration: none;
+      }
+      .ctrlbtn {
+        &:first-child {
+          padding-left: 0;
+        }
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 16px;
+        border-right: 2px solid $lightgray;
+        color: $blue;
+        &:last-child {
+          border: none;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .spinner {
+      height: 68px;
+      width: 68px;
+      margin-right: 21px;
+    }
+    .percent {
+      h1 {
+        margin: 12px 0 4px;
+        font-weight: 600;
+      }
+      span {
+        color: $gray;
+      }
+    }
+  }
+  @media only screen and (max-width: $xs) {
+    border: 1px solid $lightgray;
+    height: 130px;
+    padding: 12px;
+    margin-bottom: 10px;
+    .left {
+      flex: 2;
+      .info {
+        .category {
+          font-size: 14px;
+        }
+        .title {
+          font-size: 16px;
+        }
+        .author {
+          font-size: 14px;
+        }
+      }
+      .controls {
+        height: 36px;
+        .comments-link {
+          border-right: 1px solid $lightgray;
+        }
+        .ctrlbtn {
+          cursor: pointer;
+          font-size: 13px;
+          padding: 0 8px;
+        }
+      }
+    }
+    .right {
+      flex: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      .spinner {
+        height: 42px;
+        width: 42px;
+        margin-right: 0;
+      }
+      .percent {
+        h1 {
+          font-size: 16px;
+          text-align: center;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
